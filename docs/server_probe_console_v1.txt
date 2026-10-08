@@ -1,0 +1,141 @@
+execute as @a[x=1,y=65,z=1,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"1/10   2 + 3 = ?   ひだり:4   まんなか:5   みぎ:6"}]}
+execute as @a[x=2,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=2,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=2,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 8.5 65 3.5 0 0
+execute as @a[x=7,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=7,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=7,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 24.5 65 3.5 0 0
+execute as @a[x=12,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=12,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=12,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 8.5 65 3.5 0 0
+execute as @a[x=17,y=65,z=1,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"2/10   7 - 2 = ?   ひだり:5   まんなか:4   みぎ:6"}]}
+execute as @a[x=18,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=18,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=18,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 40.5 65 3.5 0 0
+execute as @a[x=23,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=23,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=23,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 24.5 65 3.5 0 0
+execute as @a[x=28,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=28,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=28,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 24.5 65 3.5 0 0
+execute as @a[x=33,y=65,z=1,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"3/10   4 + 4 = ?   ひだり:7   まんなか:9   みぎ:8"}]}
+execute as @a[x=34,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=34,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=34,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 40.5 65 3.5 0 0
+execute as @a[x=39,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=39,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=39,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 40.5 65 3.5 0 0
+execute as @a[x=44,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=44,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=44,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 56.5 65 3.5 0 0
+execute as @a[x=49,y=65,z=1,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"4/10   9 - 3 = ?   ひだり:5   まんなか:6   みぎ:7"}]}
+execute as @a[x=50,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=50,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=50,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 56.5 65 3.5 0 0
+execute as @a[x=55,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=55,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=55,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 8.5 65 19.5 0 0
+execute as @a[x=60,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=60,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=60,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 56.5 65 3.5 0 0
+execute as @a[x=1,y=65,z=17,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"5/10   6 + 3 = ?   ひだり:9   まんなか:8   みぎ:10"}]}
+execute as @a[x=2,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=2,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=2,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 24.5 65 19.5 0 0
+execute as @a[x=7,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=7,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=7,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 8.5 65 19.5 0 0
+execute as @a[x=12,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=12,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=12,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 8.5 65 19.5 0 0
+execute as @a[x=17,y=65,z=17,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"6/10   10 - 4 = ?   ひだり:7   まんなか:5   みぎ:6"}]}
+execute as @a[x=18,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=18,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=18,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 24.5 65 19.5 0 0
+execute as @a[x=23,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=23,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=23,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 24.5 65 19.5 0 0
+execute as @a[x=28,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=28,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=28,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 40.5 65 19.5 0 0
+execute as @a[x=33,y=65,z=17,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"7/10   8 + 5 = ?   ひだり:12   まんなか:13   みぎ:14"}]}
+execute as @a[x=34,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=34,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=34,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 40.5 65 19.5 0 0
+execute as @a[x=39,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=39,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=39,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 56.5 65 19.5 0 0
+execute as @a[x=44,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=44,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=44,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 40.5 65 19.5 0 0
+execute as @a[x=49,y=65,z=17,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"8/10   12 - 5 = ?   ひだり:7   まんなか:6   みぎ:8"}]}
+execute as @a[x=50,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=50,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=50,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 8.5 65 35.5 0 0
+execute as @a[x=55,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=55,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=55,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 56.5 65 19.5 0 0
+execute as @a[x=60,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=60,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=60,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 56.5 65 19.5 0 0
+execute as @a[x=1,y=65,z=33,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"9/10   7 + 6 = ?   ひだり:12   まんなか:14   みぎ:13"}]}
+execute as @a[x=2,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=2,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=2,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 8.5 65 35.5 0 0
+execute as @a[x=7,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=7,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=7,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 8.5 65 35.5 0 0
+execute as @a[x=12,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=12,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=12,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 24.5 65 35.5 0 0
+execute as @a[x=17,y=65,z=33,dx=13,dy=3,dz=13] run titleraw @s actionbar {"rawtext":[{"text":"10/10   14 - 8 = ?   ひだり:5   まんなか:6   みぎ:7"}]}
+execute as @a[x=18,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=18,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=18,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 24.5 65 35.5 0 0
+execute as @a[x=23,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"せいかい！"}]}
+execute as @a[x=23,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1
+execute as @a[x=23,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 40.5 65 35.5 0 0
+execute as @a[x=28,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {"rawtext":[{"text":"もういちど！"}]}
+execute as @a[x=28,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1
+execute as @a[x=28,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 24.5 65 35.5 0 0
+execute as @a[x=33,y=65,z=33,dx=13,dy=3,dz=13,tag=!maze_goal] run titleraw @s subtitle {"rawtext":[{"text":"10もん クリア！ よく がんばったね！"}]}
+execute as @a[x=33,y=65,z=33,dx=13,dy=3,dz=13,tag=!maze_goal] run titleraw @s title {"rawtext":[{"text":"おめでとう！"}]}
+execute as @a[x=33,y=65,z=33,dx=13,dy=3,dz=13,tag=!maze_goal] at @s run playsound random.levelup @s ~ ~ ~ 1 1
+execute as @a[x=33,y=65,z=33,dx=13,dy=3,dz=13,tag=!maze_goal] run tag @s add maze_goal
+execute if entity @a[x=33,y=65,z=33,dx=13,dy=3,dz=13] run particle minecraft:totem_particle 40.5 67 40.5
+execute as @a[x=33,y=65,z=44,dx=2,dy=2,dz=2] run tag @s remove maze_goal
+execute as @a[x=33,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 8.5 65 3.5 0 0
+testforblock 8 64 3 birch_planks
+testforblock 8 65 3 air
+testforblock 8 66 3 air
+testforblock 24 64 3 birch_planks
+testforblock 24 65 3 air
+testforblock 24 66 3 air
+testforblock 40 64 3 birch_planks
+testforblock 40 65 3 air
+testforblock 40 66 3 air
+testforblock 56 64 3 birch_planks
+testforblock 56 65 3 air
+testforblock 56 66 3 air
+testforblock 8 64 19 birch_planks
+testforblock 8 65 19 air
+testforblock 8 66 19 air
+testforblock 24 64 19 birch_planks
+testforblock 24 65 19 air
+testforblock 24 66 19 air
+testforblock 40 64 19 birch_planks
+testforblock 40 65 19 air
+testforblock 40 66 19 air
+testforblock 56 64 19 birch_planks
+testforblock 56 65 19 air
+testforblock 56 66 19 air
+testforblock 8 64 35 birch_planks
+testforblock 8 65 35 air
+testforblock 8 66 35 air
+testforblock 24 64 35 birch_planks
+testforblock 24 65 35 air
+testforblock 24 66 35 air
+testforblock 40 64 35 birch_planks
+testforblock 40 65 35 air
+testforblock 40 66 35 air
+particle minecraft:totem_particle 40.5 67 40.5

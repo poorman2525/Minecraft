@@ -17,8 +17,9 @@ VERSION = ("bedrock", (1, 19, 50))
 
 
 def verify():
-    artifact = ROOT / "dist/math_maze_v1.mcworld"
     layout = json.loads((ROOT / "dist/layout.json").read_text())
+    artifact = ROOT / "dist" / layout["artifact"]
+    width, depth, roof = (layout["geometry"][k] for k in ("width", "depth", "roof"))
     checks = []
     counts = {}
     with tempfile.TemporaryDirectory() as folder:
@@ -40,7 +41,7 @@ def verify():
         header, size = struct.unpack("<ii", blob[:8])
         assert header in (8, 9, 10) and size == len(blob) - 8
         root = load(blob[8:], compressed=False, little_endian=True).compound
-        for key, val in {"GameType": 2, "Difficulty": 0, "SpawnX": 8, "SpawnY": 65,
+        for key, val in {"GameType": 2, "Difficulty": 0, "SpawnX": 16, "SpawnY": 65,
                          "SpawnZ": 3, "spawnradius": 0, "commandsEnabled": 1,
                          "commandblocksenabled": 1, "MultiplayerGame": 0}.items():
             assert root[key].py_int == val, key
@@ -52,6 +53,8 @@ def verify():
             return level.get_version_block(x, y, z, DIM, VERSION)[0]
         def empty(x, y, z):
             return block(x, y, z).base_name == "air"
+        def walkable(x, y, z):
+            return block(x, y, z).base_name in ("air", "stone_pressure_plate")
         def safe(p):
             x, y, z = map(math.floor, p)
             assert not empty(x, y - 1, z), p
@@ -63,7 +66,7 @@ def verify():
             for cx, cz in chunks:
                 state = wrapper.level_db.get(struct.pack("<ii", cx, cz) + b"\x36")
                 assert struct.unpack("<i", state)[0] == 2, (cx, cz)
-            checks.append("All 30 prebuilt chunks readable and finalized in stored LevelDB")
+            checks.append(f"All {len(chunks)} prebuilt chunks readable and finalized in stored LevelDB")
             entities = {}
             for cx, cz in chunks:
                 key = struct.pack("<ii", cx, cz) + b"\x31"
@@ -85,7 +88,8 @@ def verify():
                 tag = entities[pos]
                 assert tag["id"].py_str == "CommandBlock"
                 assert tag["Command"].py_str == record["command"]
-                assert tag["auto"].py_int == 1 and tag["powered"].py_int == 0
+                assert tag["auto"].py_int == record["auto"] and tag["powered"].py_int == 0
+                assert tag["LPRedstoneMode"].py_int == (not record["auto"])
                 assert tag["Version"].py_int == 36
                 assert tag["TickDelay"].py_int == record["delay"]
                 b = block(*pos)
@@ -103,18 +107,18 @@ def verify():
                 assert tag["id"].py_str == "Sign" and tag["Text"].py_str == record["text"]
                 assert tag["FrontText"]["Text"].py_str == record["text"]
             assert len(entities) == len(layout["commands"]) + len(layout["signs"])
-            checks.append("All saved command/sign NBT, downward chains, always-active flags and text checked")
+            checks.append("All saved command/sign NBT, downward chains, impulse redstone/chain auto flags and text checked")
             # Every room has no physical opening to another room/the outside.
             for i in range(11):
-                ox, oz = (i % 4 * 16, i // 4 * 16)
-                for x in range(ox, ox + 16):
-                    for z in range(oz, oz + 16):
+                ox, oz = (i % 4 * width, i // 4 * depth)
+                for x in range(ox, ox + width):
+                    for z in range(oz, oz + depth):
                         assert not empty(x, 64, z)
-                        assert not empty(x, 70, z)
-                        if x in (ox, ox + 15) or z in (oz, oz + 15):
-                            for y in range(65, 70):
+                        assert not empty(x, roof, z)
+                        if x in (ox, ox + width - 1) or z in (oz, oz + depth - 1):
+                            for y in range(65, roof):
                                 assert not empty(x, y, z)
-                safe([ox + 8.5, 65, oz + 3.5])
+                safe([ox + 16.5, 65, oz + 3.5])
             checks.append("All 11 rooms fully enclosed, floors/roofs/walls stored; all arrivals safe")
             assert len(layout["rooms"]) == 10
             for room in layout["rooms"]:
@@ -130,34 +134,52 @@ def verify():
                     x, z = todo.popleft()
                     for dx, dz in ((1, 0), (-1, 0), (0, 1), (0, -1)):
                         p = x + dx, z + dz
-                        if p not in reachable and empty(p[0], 65, p[1]) and empty(p[0], 66, p[1]):
+                        if p not in reachable and walkable(p[0], 65, p[1]) and empty(p[0], 66, p[1]):
                             reachable.add(p)
                             todo.append(p)
                 ox, oz = room["origin"]
-                assert all(ox < x < ox + 15 and oz < z < oz + 15 for x, z in reachable)
+                assert all(ox < x < ox + width - 1 and oz < z < oz + depth - 1 for x, z in reachable)
                 for route in routes:
                     assert route["correct"] == (route["choice"] == answer)
                     x, _, z, dx, _, dz = route["trigger"]
                     assert any((tx, tz) in reachable for tx in range(x, x + dx + 1) for tz in range(z, z + dz + 1))
                     safe(route["destination"])
                     j = room["index"] + 1 if route["correct"] else room["index"]
-                    expected = [j % 4 * 16 + 8.5, 65, j // 4 * 16 + 3.5]
+                    expected = [j % 4 * width + 16.5, 65, j // 4 * depth + 3.5]
                     assert route["destination"] == expected
                     selector = f"@a[x={x},y=65,z={z},dx={dx},dy=2,dz={dz}]"
                     dest = route["destination"]
                     expected_tp = f"execute as {selector} run tp @s {dest[0]} {dest[1]} {dest[2]} 0 0"
-                    assert entities[(x + 1, 60, z)]["Command"].py_str == expected_tp
+                    assert entities[tuple(route["tp_command_position"])]["Command"].py_str == expected_tp
+                    plate = route["plate"]
+                    assert block(*plate).base_name == "stone_pressure_plate"
+                    assert block(*plate).properties["redstone_signal"].py_int == 0
+                    assert block(plate[0], 64, plate[2]).base_name == "wool"
+                    assert block(plate[0], 63, plate[2]).base_name == "command_block"
                 # Entry is outside every answer trigger, avoiding immediate re-trigger.
                 assert all(not (r["trigger"][0] <= sx <= r["trigger"][0] + 2 and
                                     r["trigger"][2] <= sz <= r["trigger"][2] + 2) for r in routes)
             checks.append("Arithmetic, 30 reachable choice routes, 10 correct advances and 20 retries checked against saved TP commands")
+            for text in layout["pixel_texts"]:
+                assert text["height"] == 5 and text["pixels"]
+                for p in text["pixels"]:
+                    b = block(*p)
+                    assert b.base_name == "wool" and b.properties["color"].py_str == text["color"]
+            for arrow in layout["floor_arrows"]:
+                for p in arrow["pixels"]:
+                    b = block(*p)
+                    assert b.base_name == "wool" and b.properties["color"].py_str == arrow["color"]
+            assert len(layout["pixel_texts"]) == 41 and len(layout["floor_arrows"]) == 31
+            assert block(*layout["restart_plate"]).base_name == "stone_pressure_plate"
+            checks.append("31 physical pressure plates, 31 colored floor arrows and 41 five-block-high text displays verified")
             commands = [e["Command"].py_str for e in entities.values() if e["id"].py_str == "CommandBlock"]
             assert any("tag=!maze_goal" in c and "おめでとう" in c for c in commands)
             assert any("particle minecraft:totem_particle" in c for c in commands)
             assert any("remove maze_goal" in c for c in commands)
             counts = {"questions": 10, "addition": 5, "subtraction": 5, "routes": 30,
                       "correct_routes": 10, "retry_routes": 20, "rooms_including_goal": 11,
-                      "chunks": len(chunks), "command_blocks": len(layout["commands"]), "signs": len(layout["signs"])}
+                      "chunks": len(chunks), "command_blocks": len(layout["commands"]), "signs": len(layout["signs"]),
+                      "pressure_plates": 31, "floor_arrows": 31, "large_texts": 41}
             checks.append("Goal congratulations, sound/particle commands and replay route present")
         finally:
             level.close()

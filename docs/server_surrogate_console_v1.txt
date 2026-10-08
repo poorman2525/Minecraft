@@ -1,0 +1,120 @@
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 3.5 65 12.5
+testforblock 8 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 8.5 65 12.5
+testforblock 24 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 13.5 65 12.5
+testforblock 8 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 19.5 65 12.5
+testforblock 40 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 24.5 65 12.5
+testforblock 24 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 29.5 65 12.5
+testforblock 24 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 35.5 65 12.5
+testforblock 40 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 40.5 65 12.5
+testforblock 40 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 45.5 65 12.5
+testforblock 56 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 51.5 65 12.5
+testforblock 56 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 56.5 65 12.5
+testforblock 8 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 61.5 65 12.5
+testforblock 56 64 3 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=3,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 3.5 65 28.5
+testforblock 24 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 8.5 65 28.5
+testforblock 8 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 13.5 65 28.5
+testforblock 8 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 19.5 65 28.5
+testforblock 24 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 24.5 65 28.5
+testforblock 24 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 29.5 65 28.5
+testforblock 40 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 35.5 65 28.5
+testforblock 40 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 40.5 65 28.5
+testforblock 56 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 45.5 65 28.5
+testforblock 40 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 51.5 65 28.5
+testforblock 8 64 35 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=35,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 56.5 65 28.5
+testforblock 56 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 61.5 65 28.5
+testforblock 56 64 19 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=19,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 3.5 65 44.5
+testforblock 8 64 35 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=35,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 8.5 65 44.5
+testforblock 8 64 35 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=35,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 13.5 65 44.5
+testforblock 24 64 35 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=35,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 19.5 65 44.5
+testforblock 24 64 35 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=35,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 24.5 65 44.5
+testforblock 40 64 35 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=35,dx=1,dy=2,dz=1]
+kill @e[type=armor_stand,name=maze_probe]
+summon armor_stand maze_probe 29.5 65 44.5
+testforblock 24 64 35 birch_planks
+testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=35,dx=1,dy=2,dz=1]

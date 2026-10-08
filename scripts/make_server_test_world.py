@@ -2,6 +2,7 @@
 import argparse
 from pathlib import Path
 import zipfile
+import json
 from amulet_nbt import load, StringTag
 from leveldb import LevelDB
 
@@ -13,11 +14,12 @@ def main():
     parser.add_argument("server_root", type=Path, help="An isolated test server directory")
     parser.add_argument("--surrogate", action="store_true")
     args = parser.parse_args()
-    name = "math_maze_surrogate" if args.surrogate else "math_maze_original"
+    name = "math_maze_v2_surrogate" if args.surrogate else "math_maze_v2_original"
     destination = args.server_root / "worlds" / name
     if destination.exists():
         raise SystemExit(f"Refusing to overwrite {destination}; use a fresh test folder.")
-    with zipfile.ZipFile(ROOT / "dist/math_maze_v1.mcworld") as archive:
+    layout = json.loads((ROOT / "dist/layout.json").read_text())
+    with zipfile.ZipFile(ROOT / "dist" / layout["artifact"]) as archive:
         archive.extractall(destination)
     changed = 0
     if args.surrogate:
@@ -32,7 +34,7 @@ def main():
                     c = tag.compound
                     if c["id"].py_str == "CommandBlock":
                         c["Command"] = StringTag(c["Command"].py_str.replace(
-                            "@a[", "@e[type=armor_stand,name=maze_probe,"))
+                            "@a[", "@e[type=pig,name=maze_probe,"))
                         changed += 1
                     tags.append(tag.save_to(compressed=False, little_endian=True))
                     payload = payload[size:]

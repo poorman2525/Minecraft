@@ -1,120 +1,190 @@
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 3.5 65 12.5
-testforblock 8 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 8.5 65 12.5
-testforblock 24 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 13.5 65 12.5
-testforblock 8 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 19.5 65 12.5
-testforblock 40 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 24.5 65 12.5
-testforblock 24 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 29.5 65 12.5
-testforblock 24 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 35.5 65 12.5
-testforblock 40 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 40.5 65 12.5
-testforblock 40 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 45.5 65 12.5
-testforblock 56 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 51.5 65 12.5
-testforblock 56 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 56.5 65 12.5
-testforblock 8 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 61.5 65 12.5
-testforblock 56 64 3 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=3,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 3.5 65 28.5
-testforblock 24 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 8.5 65 28.5
-testforblock 8 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 13.5 65 28.5
-testforblock 8 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 19.5 65 28.5
-testforblock 24 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 24.5 65 28.5
-testforblock 24 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 29.5 65 28.5
-testforblock 40 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 35.5 65 28.5
-testforblock 40 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 40.5 65 28.5
-testforblock 56 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 45.5 65 28.5
-testforblock 40 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 51.5 65 28.5
-testforblock 8 64 35 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=35,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 56.5 65 28.5
-testforblock 56 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 61.5 65 28.5
-testforblock 56 64 19 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=56,y=65,z=19,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 3.5 65 44.5
-testforblock 8 64 35 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=35,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 8.5 65 44.5
-testforblock 8 64 35 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=8,y=65,z=35,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 13.5 65 44.5
-testforblock 24 64 35 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=35,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 19.5 65 44.5
-testforblock 24 64 35 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=35,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 24.5 65 44.5
-testforblock 40 64 35 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=40,y=65,z=35,dx=1,dy=2,dz=1]
-kill @e[type=armor_stand,name=maze_probe]
-summon armor_stand maze_probe 29.5 65 44.5
-testforblock 24 64 35 birch_planks
-testfor @e[type=armor_stand,name=maze_probe,x=24,y=65,z=35,dx=1,dy=2,dz=1]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 5.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 16 64 3 birch_planks
+testforblock 16 65 3 air
+testfor @e[type=pig,name=maze_probe,x=15,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 16.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 48 64 3 birch_planks
+testforblock 48 65 3 air
+testfor @e[type=pig,name=maze_probe,x=47,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 26.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 16 64 3 birch_planks
+testforblock 16 65 3 air
+testfor @e[type=pig,name=maze_probe,x=15,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 37.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 80 64 3 birch_planks
+testforblock 80 65 3 air
+testfor @e[type=pig,name=maze_probe,x=79,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 48.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 48 64 3 birch_planks
+testforblock 48 65 3 air
+testfor @e[type=pig,name=maze_probe,x=47,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 58.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 48 64 3 birch_planks
+testforblock 48 65 3 air
+testfor @e[type=pig,name=maze_probe,x=47,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 69.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 80 64 3 birch_planks
+testforblock 80 65 3 air
+testfor @e[type=pig,name=maze_probe,x=79,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 80.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 80 64 3 birch_planks
+testforblock 80 65 3 air
+testfor @e[type=pig,name=maze_probe,x=79,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 90.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 112 64 3 birch_planks
+testforblock 112 65 3 air
+testfor @e[type=pig,name=maze_probe,x=111,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 101.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 112 64 3 birch_planks
+testforblock 112 65 3 air
+testfor @e[type=pig,name=maze_probe,x=111,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 112.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 16 64 35 birch_planks
+testforblock 16 65 35 air
+testfor @e[type=pig,name=maze_probe,x=15,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 122.5 65.1 26.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 112 64 3 birch_planks
+testforblock 112 65 3 air
+testfor @e[type=pig,name=maze_probe,x=111,y=65,z=2,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 5.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 48 64 35 birch_planks
+testforblock 48 65 35 air
+testfor @e[type=pig,name=maze_probe,x=47,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 16.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 16 64 35 birch_planks
+testforblock 16 65 35 air
+testfor @e[type=pig,name=maze_probe,x=15,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 26.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 16 64 35 birch_planks
+testforblock 16 65 35 air
+testfor @e[type=pig,name=maze_probe,x=15,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 37.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 48 64 35 birch_planks
+testforblock 48 65 35 air
+testfor @e[type=pig,name=maze_probe,x=47,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 48.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 48 64 35 birch_planks
+testforblock 48 65 35 air
+testfor @e[type=pig,name=maze_probe,x=47,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 58.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 80 64 35 birch_planks
+testforblock 80 65 35 air
+testfor @e[type=pig,name=maze_probe,x=79,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 69.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 80 64 35 birch_planks
+testforblock 80 65 35 air
+testfor @e[type=pig,name=maze_probe,x=79,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 80.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 112 64 35 birch_planks
+testforblock 112 65 35 air
+testfor @e[type=pig,name=maze_probe,x=111,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 90.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 80 64 35 birch_planks
+testforblock 80 65 35 air
+testfor @e[type=pig,name=maze_probe,x=79,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 101.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 16 64 67 birch_planks
+testforblock 16 65 67 air
+testfor @e[type=pig,name=maze_probe,x=15,y=65,z=66,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 112.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 112 64 35 birch_planks
+testforblock 112 65 35 air
+testfor @e[type=pig,name=maze_probe,x=111,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 122.5 65.1 58.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 112 64 35 birch_planks
+testforblock 112 65 35 air
+testfor @e[type=pig,name=maze_probe,x=111,y=65,z=34,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 5.5 65.1 90.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 16 64 67 birch_planks
+testforblock 16 65 67 air
+testfor @e[type=pig,name=maze_probe,x=15,y=65,z=66,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 16.5 65.1 90.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 16 64 67 birch_planks
+testforblock 16 65 67 air
+testfor @e[type=pig,name=maze_probe,x=15,y=65,z=66,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 26.5 65.1 90.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 48 64 67 birch_planks
+testforblock 48 65 67 air
+testfor @e[type=pig,name=maze_probe,x=47,y=65,z=66,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 37.5 65.1 90.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 48 64 67 birch_planks
+testforblock 48 65 67 air
+testfor @e[type=pig,name=maze_probe,x=47,y=65,z=66,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 48.5 65.1 90.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 80 64 67 birch_planks
+testforblock 80 65 67 air
+testfor @e[type=pig,name=maze_probe,x=79,y=65,z=66,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 58.5 65.1 90.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testforblock 48 64 67 birch_planks
+testforblock 48 65 67 air
+testfor @e[type=pig,name=maze_probe,x=47,y=65,z=66,dx=3,dy=2,dz=3]
+kill @e[type=pig,name=maze_probe]
+summon pig maze_probe 80.5 65 67.5
+effect @e[type=pig,name=maze_probe] slowness 60 255 true
+testfor @e[type=pig,name=maze_probe,tag=maze_goal]
+tp @e[type=pig,name=maze_probe] 69.5 65.1 90.5
+testforblock 16 64 3 birch_planks
+testforblock 16 65 3 air
+testforblock 16 66 3 air
+testforblock 16 64 3 birch_planks
+testfor @e[type=pig,name=maze_probe,tag=!maze_goal,x=15,y=65,z=2,dx=3,dy=2,dz=3]

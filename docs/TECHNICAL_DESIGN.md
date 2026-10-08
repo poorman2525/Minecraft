@@ -19,15 +19,15 @@ MojangのLevelDB派生実装を包む`amulet-leveldb`を使用し、汎用LevelD
 ## 仕様
 
 - 足し算5問・引き算5問。前半は10以内、後半は繰り上がり・繰り下がりも含みます。
-- 16×16の室をチャンクに合わせ、64×48内に10室とゴールを配置します。
-- 床Y=64、足元Y=65、天井Y=70。全室を完全に閉じます。
-- 生成完了状態=2で保存し、周辺を含む30チャンクを生成済みとします。
-- 問題は毎秒のアクションバーと通路奥の看板で表示します。
-- 回答は色付き通路奥の座標範囲で検出。クリックや感圧板のレッドストーンに依存しません。
-- リピート→下向きチェーンで結果表示・音・移動を実行します。
+- 32×32の室を2×2チャンクに合わせ、128×96内に10室とゴールを配置します。
+- 床Y=64、足元Y=65、天井Y=80。全室を完全に閉じます。
+- 生成完了状態=2で保存し、周辺を含む80チャンクを生成済みとします。
+- 問題は毎秒のアクションバーと壁の高さ5ブロックの数字で表示します。補助説明は看板に表示します。
+- 回答は床の石の感圧板を踏むことで行います。板の真下の羊毛ブロックを通して、その下のインパルスコマンドブロックへレッドストーン信号が届きます。通路の座標検出だけでは回答しません。
+- 感圧板の信号を必要とするインパルス（auto=0）→常時有効な下向きチェーンで結果表示・音・移動を実行します。問題表示とゴール演出は従来どおりリピートです。
 - 正解は次室入口、不正解は同室入口へ戻します。入口は判定域から離して再判定を防ぎます。
 - ゴールは`maze_goal`タグで文字・音を一度だけ再生し、粒子は滞在中に繰り返します。
-- 青い通路でタグを消し、1問目へ戻します。
+- 青い矢印の先の感圧板でタグを消し、1問目へ戻します。
 - 一人用、冒険モード。通常操作では囲いから脱出・破壊できません。
 - コマンドブロックは床下。プレイ中に`fill`・`setblock`・`structure`・`function`を実行しません。
 
@@ -46,27 +46,25 @@ Minecraftのコマンドパーサー・描画・インポートUIの検証とは
 旧パック現物を調査していないため、以前の3問目の原因は断定しません。
 今回の構成では、建築タイミングを移動・チャンク読込から切り離します。
 
-## 公式サーバーの補助検証
+## 公式サーバーの補助検証（v2）
 
-Linux版Bedrock Dedicated Server 1.26.52.3を公式配布から取得し、配布ZIPのコピーを読み込みました。
-パックスタックはNone、冒険モード、ピースフルで起動しました。
-全11到着地点の床・足元・頭上を`testforblock`で確認（33件成功）。
-107コマンドのコンソール投入で構文エラー0件。プレイヤーがいないため106件は対象なし、
-1件はif entity不成立でした。粒子の直接コマンドは受理されましたが、見た目は未確認です。
-サーバー保存後、42看板すべてのFrontTextが非空、107コマンドが保存されていることも確認しました。
+Linux版Bedrock Dedicated Server 1.26.52.3を使用します。配布ZIPのコピーをパックなし・冒険・ピースフルで読み込みます。
+元ワールドでは全11到着地点の床・空間と31感圧板を確認し、107コマンドをコンソールへ投入します。
+プレイヤー未接続の対象なしという結果は想定どおりで、文字や音の表示・再生確認にはなりません。
 
-次に別のテストコピーで`@a[...]`を`@e[type=armor_stand,name=maze_probe,...]`に変更しました。
-地形・コマンドブロック設定・TPコマンドと移動先を維持したまま、各回答域へ防具立てを生成し、
-チェーンによる自動移動後の位置を`testfor`で検出。全30経路で到着確認、エラー0件でした。
-これはコマンドブロックの実行・移動処理の補助検証であり、プレイヤーの権限、画面、音や
-操作しやすさを確認するものではありません。配布ファイルをサーバー変換済みコピーに置換していません。
+別のテストコピーでは`@a[...]`を`@e[type=pig,name=maze_probe,...]`へ変更します。
+ブタは実際に石の感圧板を押せるので、板、支持ブロック、信号を受けるインパルス、下向きチェーンと移動先を維持して検証できます。
+各板へブタを生成し、移動抑制効果を与え、回答後の到着域で検出します。
+これはプレイヤーの権限、画面、音や操作のしやすさを確認するものではありません。
+配布ファイルをサーバー変換済み／対象置換済みのテストコピーに置換しません。
 
-検証記録は`dist/server_validation.json`。
+最新結果は`dist/server_validation.json`、初版結果は`dist/server_validation_v1.json`。
 投入コマンドは`docs/server_probe_console.txt`と`docs/server_surrogate_console.txt`。
 テストコピーは`python scripts/make_server_test_world.py /path/to/server [--surrogate]`で作成できます。
-専用のテスト用サーバーでlevel-nameを表示された名前へ変更し、チート有効・冒険・ピースフルで起動します。
-先に`tickingarea add -16 0 -16 79 80 63 maze_qa true`を投入し、読込を待ってから各コマンド一覧を投入します。
-元ワールド用一覧のプレイヤー対象なしは想定どおり。防具立て用一覧では`Found maze_probe`が30件になることを確認します。
+専用テストサーバーでlevel-nameを表示された名前へ変更し、チート有効・冒険・ピースフルで起動します。
+先に`tickingarea add -16 0 -16 143 90 111 maze_qa true`を投入し、全域の読込を確認してから一覧を投入します。
+ブタ用一覧の前に入口で`summon pig maze_probe 16.5 65 3.5`しておくと、最初のkillも対象を持ちます。
+到着の判定範囲は床上の小さな領域で、テレポート後のブタの微小な動きを許容します。
 サーバーのバイナリや公式リソースはリポジトリへ同梱しません。
 
 ## 一次資料
@@ -79,3 +77,5 @@ Linux版Bedrock Dedicated Server 1.26.52.3を公式配布から取得し、配�
 - Microsoft公式execute：https://learn.microsoft.com/en-us/minecraft/creator/reference/content/commandsreference/examples/commands/execute?view=minecraft-bedrock-stable
 - Microsoft公式titleraw：https://learn.microsoft.com/en-us/minecraft/creator/reference/content/commandsreference/examples/commands/titleraw?view=minecraft-bedrock-stable
 - Microsoft公式particle：https://github.com/MicrosoftDocs/minecraft-creator/blob/main/creator/Reference/Content/CommandsReference/Examples/Commands/particle.md
+
+- Microsoft公式のブロック状態（感圧板のredstone_signal）：https://learn.microsoft.com/en-us/minecraft/creator/reference/content/vanillalistingsreference/blocks?view=minecraft-bedrock-stable
