@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION = (1, 19, 50)
 DIM = "minecraft:overworld"
 WORLD = ROOT / "build" / "math_maze"
-OUT = ROOT / "dist" / "math_maze_v4.mcworld"
+OUT = ROOT / "dist" / "math_maze_v5.mcworld"
 WIDTH, DEPTH, FLOOR, ROOF = 32, 32, 64, 80
 CENTERS = (26, 16, 5)
 LANES = ((22, 30), (12, 20), (1, 10))
@@ -56,8 +56,9 @@ def raw(text):
 
 def build():
     questions = json.loads((ROOT / "data/questions.json").read_text())
-    assert len(questions) == 10
-    assert sum(q["op"] == "+" for q in questions) == 5
+    assert len(questions) == 20
+    assert sum(q["op"] == "+" for q in questions) == 10
+    assert all(q["op"] == ("+" if i < 10 else "-") for i, q in enumerate(questions))
     WORLD.parent.mkdir(parents=True, exist_ok=True)
     if WORLD.exists():
         shutil.rmtree(WORLD)
@@ -78,7 +79,7 @@ def build():
                  "LANBroadcast": 0, "LANBroadcastIntent": 0,
                  "hasBeenLoadedInCreative": 1, "ForceGameType": 1}.items():
         root[k] = ByteTag(v)
-    root["LevelName"] = StringTag("さんすう めいろ v4")
+    root["LevelName"] = StringTag("さんすう めいろ v5")
     root["Time"] = LongTag(6000)
     root["RandomSeed"] = LongTag(20261008)
     root["FlatWorldLayers"] = StringTag(json.dumps({"biome_id": 1,
@@ -93,6 +94,7 @@ def build():
     manifest = {"artifact": OUT.name, "format_version": list(VERSION), "spawn": entry(0),
                 "geometry": {"width": WIDTH, "depth": DEPTH, "floor": FLOOR, "roof": ROOF},
                 "controls": "stone_pressure_plate", "pixel_texts": [], "floor_arrows": [],
+                "randomization": {"pool_size": 20, "questions_per_run": 10, "addition_per_run": 5, "subtraction_per_run": 5, "hub": entry(0), "goal": entry(21), "enclosures": 22},
                 "rooms": [], "commands": [], "signs": [], "prebuilt_chunks": []}
     cache = {}
 
@@ -144,31 +146,31 @@ def build():
                     pixels.append(pos)
         manifest["floor_arrows"].append({"color": color, "pixels": pixels})
 
-    def chain(x, z, commands, delay=0, plate=False):
-        # Vertical arrow direction 0 = down. Four blocks fit below the floor.
-        assert len(commands) <= 5
+    def chain(x, z, commands, delay=0, plate=False, conditional=False):
+        # Vertical arrow direction 0 = down; long reset chains remain underground.
+        assert len(commands) <= 30
         for j, command in enumerate(commands):
             y = (63 if plate else 62) - j
             kind = ("command_block" if plate else "repeating_command_block") if j == 0 else "chain_command_block"
             auto = not (plate and j == 0)
-            put(x, y, z, kind, facing_direction=0, conditional_bit=False)
+            put(x, y, z, kind, facing_direction=0, conditional_bit=conditional and j > 0)
             entity(x, y, z, "CommandBlock", {
                 "Command": StringTag(command), "CustomName": StringTag("Math Maze"),
                 "Version": IntTag(36), "SuccessCount": IntTag(0), "isMovable": ByteTag(0),
                 "LastOutput": StringTag(""), "LastOutputParams": ListTag([]),
                 "TrackOutput": ByteTag(0), "auto": ByteTag(auto), "powered": ByteTag(0),
                 "conditionMet": ByteTag(0), "LPCommandMode": IntTag((0 if plate else 1) if j == 0 else 2),
-                "LPCondionalMode": ByteTag(0), "LPRedstoneMode": ByteTag(not auto),
+                "LPCondionalMode": ByteTag(conditional and j > 0), "LPRedstoneMode": ByteTag(not auto),
                 "TickDelay": IntTag(delay if j == 0 else 0), "ExecuteOnFirstTick": ByteTag(1),
                 "LastExecution": LongTag(-1), "UpdateLastExecution": ByteTag(1)})
             manifest["commands"].append({"position": [x, y, z], "kind": kind,
                                          "command": command, "delay": delay if j == 0 else 0,
-                                         "auto": int(auto)})
+                                         "auto": int(auto), "conditional": int(conditional and j > 0)})
 
     # Buffer chunks are baked too. Finished state prevents terrain population
     # from replacing the room shells when a new room is first visited.
     for cx in range(-1, 9):
-        for cz in range(-1, 7):
+        for cz in range(-1, 13):
             chunk = level.create_chunk(cx, cz, DIM)
             chunk.status.value = 2.0
             manifest["prebuilt_chunks"].append([cx, cz])
@@ -178,7 +180,7 @@ def build():
                     put(x, 64, z, "stone")
 
     colors = ["red", "yellow", "lime"]
-    for i in range(11):
+    for i in range(22):
         ox, oz = origin(i)
         for x in range(ox, ox + WIDTH):
             for z in range(oz, oz + DEPTH):
@@ -191,16 +193,17 @@ def build():
             for z in (oz + 4, oz + 14, oz + 27):
                 put(x, ROOF, z, "glowstone")
         room_sel = f"@a[x={ox+1},y=65,z={oz+1},dx=29,dy=14,dz=29]"
-        if i < 10:
-            q = questions[i]
+        if 1 <= i <= 20:
+            q = questions[i - 1]
             answer = q["a"] + q["b"] if q["op"] == "+" else q["a"] - q["b"]
             assert len(set(q["choices"])) == 3 and q["choices"].count(answer) == 1
             expr = f'{q["a"]} {q["op"]} {q["b"]} = ?'
-            room = {"index": i, "origin": [ox, oz], "entry": entry(i), "question": q,
+            room = {"index": i, "pool_index": i - 1, "origin": [ox, oz], "entry": entry(i), "question": q,
                     "answer": answer, "routes": []}
             manifest["rooms"].append(room)
             choices = "   ".join(f'[{val}]' for val in q["choices"])
-            chain(ox + 1, oz + 2, [f'execute as {room_sel} run titleraw @s actionbar {raw(f"{i+1}/10   {expr}   {choices}   いたを ふもう")}'], delay=20)
+            message = json.dumps({"rawtext": [{"score": {"name": "@s", "objective": "maze_count"}}, {"text": f"/10   {expr}   {choices}   いたを ふもう"}]}, ensure_ascii=True, separators=(",", ":"))
+            chain(ox + 1, oz + 2, [f'execute as {room_sel} run titleraw @s actionbar {message}'], delay=20)
             # Broad, high-contrast display panels and 5-block-tall arithmetic.
             for x in range(ox + 1, ox + 31):
                 for y in range(73, 80):
@@ -222,17 +225,52 @@ def build():
                 put(ox + center, 65, oz + 26, "stone_pressure_plate", redstone_signal=0)
                 selector = f"@a[x={ox+center},y=65,z={oz+26},dx=0,dy=2,dz=0]"
                 correct = q["choices"][c] == answer
-                dest = entry(i + 1 if correct else i)
+                dest = entry(0 if correct else i)
                 feedback = "せいかい" if correct else "もういちど"
                 sound = "random.levelup" if correct else "note.bass"
                 commands = [f'execute as {selector} run titleraw @s title {raw(feedback)}',
                             f'execute as {selector} at @s run playsound {sound} @s ~ ~ ~ 0.5 1',
                             f'execute as {selector} run tp @s {dest[0]} {dest[1]} {dest[2]} 0 0']
+                if correct:
+                    commands.insert(2, f"execute as {selector} run tag @s add maze_draw")
                 chain(ox + center, oz + 26, commands, plate=True)
                 room["routes"].append({"choice": q["choices"][c], "correct": correct,
                     "trigger": [ox + center, 65, oz + 26, 0, 2, 0], "plate": [ox + center, 65, oz + 26],
-                    "tp_command_position": [ox + center, 61, oz + 26], "destination": dest})
+                    "tp_command_position": [ox + center, 60 if correct else 61, oz + 26], "destination": dest})
             sign(ox + 16, 67, oz + 1, "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう", facing=3)
+        elif i == 0:
+            # Initialize both objectives before tagging a player as initialized.
+            initial = room_sel[:-1] + ",tag=!maze_started]"
+            chain(ox + 1, oz + 2, [
+                "scoreboard objectives add maze_count dummy",
+                "scoreboard objectives add maze_pick dummy",
+                f"execute as {initial} run scoreboard players set @s maze_count 0",
+                f"execute as {initial} run scoreboard players set @s maze_pick 0",
+                f"execute as {initial} run tag @s add maze_draw",
+                f"execute as {initial} run tag @s add maze_started"])
+            draws = []
+            for n in range(10):
+                selector = room_sel[:-1] + f",tag=maze_draw,scores={{maze_count={n}}}]"
+                low, high = (1, 10) if n % 2 == 0 else (11, 20)
+                draws.append(f"execute as {selector} run scoreboard players random @s maze_pick {low} {high}")
+            chain(ox + 2, oz + 2, draws)
+            for p in range(20):
+                draw = f"@a[tag=maze_draw,scores={{maze_pick={p+1}}}]"
+                eligible = room_sel[:-1] + f",tag=maze_draw,tag=!maze_seen_{p},scores={{maze_pick={p+1},maze_count=0..9}}]"
+                dest = entry(p + 1)
+                # Conditional chains only change state after this draw teleports.
+                chain(ox + 3 + p % 10, oz + 5 + p // 10, [
+                    f"execute as {eligible} run tp @s {dest[0]} {dest[1]} {dest[2]} 0 0",
+                    f"execute as {draw} run tag @s add maze_seen_{p}",
+                    f"execute as {draw} run scoreboard players add @s maze_count 1",
+                    f"execute as {draw} run tag @s remove maze_draw"], conditional=True)
+            complete = room_sel[:-1] + ",tag=maze_draw,scores={maze_count=10}]"
+            dest = entry(21)
+            chain(ox + 13, oz + 5, [
+                f"execute as {complete} run tp @s {dest[0]} {dest[1]} {dest[2]} 0 0",
+                "execute as @a[tag=maze_draw,scores={maze_count=10}] run tag @s remove maze_draw"], conditional=True)
+            sign(ox + 16, 67, oz + 30, "さんすう めいろ\n10もん あそぼう\nもんだいを\nえらんでいるよ")
+            chain(ox + 14, oz + 5, [f'execute as {room_sel} run titleraw @s actionbar {raw("つぎの もんだいを えらんでいるよ")}'], delay=20)
         else:
             goal_sel = room_sel[:-1] + ",tag=!maze_goal]"
             chain(ox + 16, oz + 3, [
@@ -257,8 +295,13 @@ def build():
             floor_arrow(ox + 5, oz + 12, "light_blue")
             put(ox + 5, 65, oz + 26, "stone_pressure_plate", redstone_signal=0)
             manifest["restart_plate"] = [ox + 5, 65, oz + 26]
-            chain(ox + 5, oz + 26, [f'execute as {restart} run tag @s remove maze_goal',
-                f'execute as {restart} run tp @s 16.5 65 3.5 0 0'], plate=True)
+            reset = [f"execute as {restart} run tag @s remove maze_seen_{p}" for p in range(20)]
+            reset += [f"execute as {restart} run scoreboard players set @s maze_count 0",
+                      f"execute as {restart} run scoreboard players set @s maze_pick 0",
+                      f"execute as {restart} run tag @s remove maze_goal",
+                      f"execute as {restart} run tag @s add maze_draw",
+                      f"execute as {restart} run tp @s 16.5 65 3.5 0 0"]
+            chain(ox + 5, oz + 26, reset, plate=True)
     level.save()
     # Native block entities are serialized only AFTER translated terrain save.
     for (cx, cz), tags in entities.items():

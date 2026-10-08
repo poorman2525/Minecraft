@@ -14,7 +14,7 @@ def main():
     parser.add_argument("server_root", type=Path, help="An isolated test server directory")
     parser.add_argument("--surrogate", action="store_true")
     args = parser.parse_args()
-    name = "math_maze_v4_surrogate" if args.surrogate else "math_maze_v4_original"
+    name = "math_maze_v5_surrogate" if args.surrogate else "math_maze_v5_original"
     destination = args.server_root / "worlds" / name
     if destination.exists():
         raise SystemExit(f"Refusing to overwrite {destination}; use a fresh test folder.")

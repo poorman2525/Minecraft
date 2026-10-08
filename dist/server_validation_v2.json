@@ -1,0 +1,42 @@
+{
+  "artifact": "math_maze_v2.mcworld",
+  "artifact_sha256": "00970dc8f3d53a26ece81ff8aab13cc40dba09a51b82ee4709818936cb0ac492",
+  "test_date": "2026-10-08",
+  "server": "Official Minecraft Bedrock Dedicated Server Linux 1.26.52.3",
+  "original_world_load": "PASS",
+  "original_world_pack_stack": "None",
+  "original_world_entry_block_tests": 33,
+  "original_world_pressure_plate_tests": 31,
+  "original_world_commands_submitted": 107,
+  "original_world_console_syntax_errors": 0,
+  "original_world_no_player_results": {
+    "no_targets": 106,
+    "if_entity_failed": 1
+  },
+  "surrogate_routing": {
+    "result": "PASS",
+    "entity": "pig",
+    "routes": 30,
+    "correct": 10,
+    "retry": 20,
+    "modified_copy": true,
+    "modification": "All @a[...] selectors replaced with @e[type=pig,name=maze_probe,...]. Pigs physically press the original stone plates. Plates, wool supports, impulse command blocks, redstone requirements, downward chain states and TP destinations retained. Slowness applied to limit unrelated movement.",
+    "arrivals_confirmed": 30,
+    "errors": 0
+  },
+  "restart_plate": {
+    "result": "PASS",
+    "goal_tag_confirmed": true,
+    "arrived_at_question_1": true,
+    "goal_tag_cleared": true,
+    "errors": 0
+  },
+  "minecraft_windows_import": "NOT_TESTED",
+  "minecraft_windows_gameplay": "NOT_TESTED",
+  "limitations": [
+    "No Windows client or real player connected.",
+    "Player-dependent titles/audio, arrow font rendering, first spawn and usability remain untested.",
+    "Server queries allow time for pressure-plate detection and entity settling; an early replay query was retried after waiting, then the timed sequence passed.",
+    "Distribution file was not replaced with test-copy or server-upgraded data."
+  ]
+}

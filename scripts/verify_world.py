@@ -96,7 +96,8 @@ def verify():
                 b = block(*pos)
                 assert b.base_name == record["kind"]
                 assert b.properties["facing_direction"].py_int == 0
-                assert b.properties["conditional_bit"].py_int == 0
+                assert b.properties["conditional_bit"].py_int == record["conditional"]
+                assert tag["LPCondionalMode"].py_int == record["conditional"]
                 cmd = record["command"]
                 assert not re.search(r"\b(fill|setblock|clone|structure|function)\b", cmd)
                 if "titleraw" in cmd:
@@ -113,14 +114,14 @@ def verify():
             for r in layout["commands"]:
                 if "titleraw" in r["command"]:
                     message = json.loads(r["command"][r["command"].index("{"):])
-                    display_texts.extend(item["text"] for item in message["rawtext"])
+                    display_texts.extend(item["text"] for item in message["rawtext"] if "text" in item)
             assert any("ここを ふもう" in t for t in display_texts)
             assert all(word in display_texts for word in ("せいかい", "もういちど", "おめでとう"))
             assert not any("STEP ON" in t or "TRY AGAIN" in t for t in display_texts)
             checks.append("Hiragana instructions and celebration round-trip through sign NBT and escaped command JSON")
             checks.append("All saved command/sign NBT, downward chains, impulse redstone/chain auto flags and text checked")
             # Every room has no physical opening to another room/the outside.
-            for i in range(11):
+            for i in range(layout["randomization"]["enclosures"]):
                 ox, oz = (i % 4 * width, i // 4 * depth)
                 for x in range(ox, ox + width):
                     for z in range(oz, oz + depth):
@@ -130,8 +131,8 @@ def verify():
                             for y in range(65, roof):
                                 assert not empty(x, y, z)
                 safe([ox + 16.5, 65, oz + 3.5])
-            checks.append("All 11 rooms fully enclosed, floors/roofs/walls stored; all arrivals safe")
-            assert len(layout["rooms"]) == 10
+            checks.append("All 22 rooms fully enclosed, floors/roofs/walls stored; all arrivals safe")
+            assert len(layout["rooms"]) == 20
             for room in layout["rooms"]:
                 q = room["question"]
                 assert [r["plate"][0] for r in room["routes"]] == [room["origin"][0] + x for x in (26, 16, 5)]
@@ -156,7 +157,7 @@ def verify():
                     x, _, z, dx, _, dz = route["trigger"]
                     assert any((tx, tz) in reachable for tx in range(x, x + dx + 1) for tz in range(z, z + dz + 1))
                     safe(route["destination"])
-                    j = room["index"] + 1 if route["correct"] else room["index"]
+                    j = 0 if route["correct"] else room["index"]
                     expected = [j % 4 * width + 16.5, 65, j // 4 * depth + 3.5]
                     assert route["destination"] == expected
                     selector = f"@a[x={x},y=65,z={z},dx={dx},dy=2,dz={dz}]"
@@ -171,7 +172,7 @@ def verify():
                 # Entry is outside every answer trigger, avoiding immediate re-trigger.
                 assert all(not (r["trigger"][0] <= sx <= r["trigger"][0] + 2 and
                                     r["trigger"][2] <= sz <= r["trigger"][2] + 2) for r in routes)
-            checks.append("Arithmetic, 30 reachable choice routes, 10 correct advances and 20 retries checked against saved TP commands")
+            checks.append("Arithmetic, 60 reachable choice routes, 20 correct returns to draw hub and 40 retries checked against saved TP commands")
             for text in layout["pixel_texts"]:
                 assert text["height"] == 5 and text["pixels"]
                 from build_world import FONT
@@ -187,17 +188,65 @@ def verify():
                 for p in arrow["pixels"]:
                     b = block(*p)
                     assert b.base_name == "wool" and b.properties["color"].py_str == arrow["color"]
-            assert len(layout["pixel_texts"]) == 41 and len(layout["floor_arrows"]) == 31
+            assert len(layout["pixel_texts"]) == 81 and len(layout["floor_arrows"]) == 61
             assert block(*layout["restart_plate"]).base_name == "stone_pressure_plate"
-            checks.append("31 physical pressure plates, 31 colored floor arrows and 41 five-block-high text displays verified")
+            checks.append("61 physical pressure plates, 61 colored floor arrows and 81 five-block-high text displays verified")
             commands = [e["Command"].py_str for e in entities.values() if e["id"].py_str == "CommandBlock"]
             assert any("tag=!maze_goal" in c and "\\u304a\\u3081\\u3067\\u3068\\u3046" in c for c in commands)
             assert any("particle minecraft:totem_particle" in c for c in commands)
             assert any("remove maze_goal" in c for c in commands)
-            counts = {"questions": 10, "addition": 5, "subtraction": 5, "routes": 30,
-                      "correct_routes": 10, "retry_routes": 20, "rooms_including_goal": 11,
+            # Check controller against the commands actually stored in the ZIP.
+            records = {tuple(r["position"]): r for r in layout["commands"]}
+            assert sum("scoreboard players random" in c for c in commands) == 10
+            for n in range(10):
+                low, high = (1, 10) if n % 2 == 0 else (11, 20)
+                c = records[(2, 62 - n, 2)]["command"]
+                assert f"maze_count={n}" in c and c.endswith(f"maze_pick {low} {high}")
+            for p, room in enumerate(layout["rooms"]):
+                assert room["pool_index"] == p and room["index"] == p + 1
+                assert room["question"]["op"] == ("+" if p < 10 else "-")
+                x, z = 3 + p % 10, 5 + p // 10
+                first = records[(x, 62, z)]
+                assert f"tag=!maze_seen_{p}" in first["command"]
+                assert "maze_count=0..9" in first["command"]
+                dest = room["entry"]
+                assert first["command"].endswith(f"tp @s {dest[0]} {dest[1]} {dest[2]} 0 0")
+                for y in (61, 60, 59):
+                    assert records[(x, y, z)]["conditional"] == 1
+                assert records[(x, 61, z)]["command"].endswith(f"add maze_seen_{p}")
+                assert records[(x, 60, z)]["command"].endswith("add @s maze_count 1")
+                assert records[(x, 59, z)]["command"].endswith("remove maze_draw")
+            assert "maze_count=10" in records[(13, 62, 5)]["command"]
+            gx, gy, gz = layout["randomization"]["goal"]
+            assert records[(13, 62, 5)]["command"].endswith(f"tp @s {gx} {gy} {gz} 0 0")
+            rx, _, rz = layout["restart_plate"]
+            for p in range(20):
+                assert records[(rx, 63 - p, rz)]["command"].endswith(f"remove maze_seen_{p}")
+                assert records[(rx, 63 - p, rz)]["conditional"] == 0
+            assert records[(rx, 43, rz)]["command"].endswith("set @s maze_count 0")
+            assert records[(rx, 39, rz)]["command"].endswith("tp @s 16.5 65 3.5 0 0")
+            # Model the stored draw/rejection policy, independently of game execution.
+            import random
+            rng = random.Random(20261008)
+            sequences = set()
+            for _ in range(10000):
+                seen, sequence = set(), []
+                for n in range(10):
+                    low, high = (0, 9) if n % 2 == 0 else (10, 19)
+                    while True:
+                        pick = rng.randint(low, high)
+                        if pick not in seen:
+                            break
+                    seen.add(pick)
+                    sequence.append(pick)
+                assert len(seen) == 10 and sum(p < 10 for p in seen) == 5
+                sequences.add(tuple(sequence))
+            assert len(sequences) > 9900
+            checks.append("Saved random controller, conditional dispatch, repeat rejection, goal at 10 and full replay reset verified; 10,000 model runs have 10 distinct questions with 5 additions/5 subtractions (not game execution)")
+            counts = {"pool_questions": 20, "questions_per_run": 10, "addition_per_run": 5, "subtraction_per_run": 5, "routes": 60,
+                      "correct_routes": 20, "retry_routes": 40, "rooms_including_hub_goal": 22,
                       "chunks": len(chunks), "command_blocks": len(layout["commands"]), "signs": len(layout["signs"]),
-                      "pressure_plates": 31, "floor_arrows": 31, "large_texts": 41}
+                      "pressure_plates": 61, "floor_arrows": 61, "large_texts": 81}
             checks.append("Goal congratulations, sound/particle commands and replay route present")
         finally:
             level.close()
