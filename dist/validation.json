@@ -1,7 +1,7 @@
 {
-  "artifact": "math_maze_v2.mcworld",
-  "sha256": "00970dc8f3d53a26ece81ff8aab13cc40dba09a51b82ee4709818936cb0ac492",
-  "size_bytes": 33637,
+  "artifact": "math_maze_v3.mcworld",
+  "sha256": "b981f7d06fdd2f9d0891b7d4bac9521351ded18b20244e50f35d7566dbf96c77",
+  "size_bytes": 33063,
   "static_validation": "PASS",
   "counts": {
     "questions": 10,
@@ -30,7 +30,7 @@
   ],
   "minecraft_windows_import": "NOT_TESTED",
   "minecraft_gameplay": "NOT_TESTED",
-  "bedrock_dedicated_server": "SEE_SEPARATE_SERVER_VALIDATION_REPORT",
+  "bedrock_dedicated_server": "NOT_TESTED",
   "limitations": [
     "No Minecraft for Windows client is available in this environment.",
     "This static validator does not execute commands; see the separate server report.",

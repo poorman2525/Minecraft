@@ -88,6 +88,7 @@ def verify():
                 tag = entities[pos]
                 assert tag["id"].py_str == "CommandBlock"
                 assert tag["Command"].py_str == record["command"]
+                assert tag["Command"].py_str.isascii(), "Unsupported display glyph risk"
                 assert tag["auto"].py_int == record["auto"] and tag["powered"].py_int == 0
                 assert tag["LPRedstoneMode"].py_int == (not record["auto"])
                 assert tag["Version"].py_int == 36
@@ -105,6 +106,7 @@ def verify():
                 tag = entities[pos]
                 assert block(*pos).base_name == "wall_sign"
                 assert tag["id"].py_str == "Sign" and tag["Text"].py_str == record["text"]
+                assert tag["Text"].py_str.isascii()
                 assert tag["FrontText"]["Text"].py_str == record["text"]
             assert len(entities) == len(layout["commands"]) + len(layout["signs"])
             checks.append("All saved command/sign NBT, downward chains, impulse redstone/chain auto flags and text checked")
@@ -123,6 +125,7 @@ def verify():
             assert len(layout["rooms"]) == 10
             for room in layout["rooms"]:
                 q = room["question"]
+                assert [r["plate"][0] for r in room["routes"]] == [room["origin"][0] + x for x in (26, 16, 5)]
                 answer = q["a"] + q["b"] if q["op"] == "+" else q["a"] - q["b"]
                 routes = room["routes"]
                 assert len(routes) == 3 and len(set(q["choices"])) == 3
@@ -162,6 +165,12 @@ def verify():
             checks.append("Arithmetic, 30 reachable choice routes, 10 correct advances and 20 retries checked against saved TP commands")
             for text in layout["pixel_texts"]:
                 assert text["height"] == 5 and text["pixels"]
+                from build_world import FONT
+                sx, by, z = text["origin"]
+                expected_pixels = {(sx + text["width"] - 1 - (c * 4 + col), by + 4 - row, z)
+                    for c, char in enumerate(text["text"]) for row, pat in enumerate(FONT[char])
+                    for col, bit in enumerate(pat) if bit == "1"}
+                assert set(map(tuple, text["pixels"])) == expected_pixels
                 for p in text["pixels"]:
                     b = block(*p)
                     assert b.base_name == "wool" and b.properties["color"].py_str == text["color"]
@@ -173,7 +182,7 @@ def verify():
             assert block(*layout["restart_plate"]).base_name == "stone_pressure_plate"
             checks.append("31 physical pressure plates, 31 colored floor arrows and 41 five-block-high text displays verified")
             commands = [e["Command"].py_str for e in entities.values() if e["id"].py_str == "CommandBlock"]
-            assert any("tag=!maze_goal" in c and "おめでとう" in c for c in commands)
+            assert any("tag=!maze_goal" in c and "GREAT!" in c for c in commands)
             assert any("particle minecraft:totem_particle" in c for c in commands)
             assert any("remove maze_goal" in c for c in commands)
             counts = {"questions": 10, "addition": 5, "subtraction": 5, "routes": 30,

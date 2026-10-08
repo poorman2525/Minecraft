@@ -79,3 +79,8 @@ Linux版Bedrock Dedicated Server 1.26.52.3を使用します。配布ZIPのコ�
 - Microsoft公式particle：https://github.com/MicrosoftDocs/minecraft-creator/blob/main/creator/Reference/Content/CommandsReference/Examples/Commands/particle.md
 
 - Microsoft公式のブロック状態（感圧板のredstone_signal）：https://learn.microsoft.com/en-us/minecraft/creator/reference/content/vanillalistingsreference/blocks?view=minecraft-bedrock-stable
+
+## v3修正
+
+北側の入口から南の壁を見る場合、画面の右はワールドXの負方向になるため、ブロック文字のX配置を反転しました。選択肢の赤・黄・緑もX=26、16、5に配置し、入口視点の順序に合わせています。配置図もXを反転して、実際の視点に合わせました。
+□表示の正確な原因は未特定です。日本語・Unicodeの矢印・文字装飾を画面と看板から除き、英数字のみ保存することを検証します。矢印は床のブロックで示します。v3は静的検証のみで、v2のサーバー検証結果を引き継いだ扱いにはしません。

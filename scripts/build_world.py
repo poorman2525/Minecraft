@@ -19,10 +19,10 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION = (1, 19, 50)
 DIM = "minecraft:overworld"
 WORLD = ROOT / "build" / "math_maze"
-OUT = ROOT / "dist" / "math_maze_v2.mcworld"
+OUT = ROOT / "dist" / "math_maze_v3.mcworld"
 WIDTH, DEPTH, FLOOR, ROOF = 32, 32, 64, 80
-CENTERS = (5, 16, 26)
-LANES = ((1, 10), (12, 20), (22, 30))
+CENTERS = (26, 16, 5)
+LANES = ((22, 30), (12, 20), (1, 10))
 FONT = {
     "0": ("111", "101", "101", "101", "111"),
     "1": ("010", "110", "010", "010", "111"),
@@ -78,7 +78,7 @@ def build():
                  "LANBroadcast": 0, "LANBroadcastIntent": 0,
                  "hasBeenLoadedInCreative": 1, "ForceGameType": 1}.items():
         root[k] = ByteTag(v)
-    root["LevelName"] = StringTag("さんすう めいろ v2 やじるし・ふむいた")
+    root["LevelName"] = StringTag("Math Maze v3")
     root["Time"] = LongTag(6000)
     root["RandomSeed"] = LongTag(20261008)
     root["FlatWorldLayers"] = StringTag(json.dumps({"biome_id": 1,
@@ -127,11 +127,11 @@ def build():
             for row, pattern in enumerate(FONT[char]):
                 for col, bit in enumerate(pattern):
                     if bit == "1":
-                        pos = [start + c * 4 + col, bottom + 4 - row, z]
+                        pos = [start + width - 1 - (c * 4 + col), bottom + 4 - row, z]
                         put(*pos, "wool", color=color)
                         pixels.append(pos)
         manifest["pixel_texts"].append({"text": text, "origin": [start, bottom, z],
-            "width": width, "height": 5, "color": color, "pixels": pixels})
+            "width": width, "height": 5, "view": "from_north_facing_south", "color": color, "pixels": pixels})
 
     def floor_arrow(x, z, color):
         pixels = []
@@ -153,7 +153,7 @@ def build():
             auto = not (plate and j == 0)
             put(x, y, z, kind, facing_direction=0, conditional_bit=False)
             entity(x, y, z, "CommandBlock", {
-                "Command": StringTag(command), "CustomName": StringTag("さんすう"),
+                "Command": StringTag(command), "CustomName": StringTag("Math Maze"),
                 "Version": IntTag(36), "SuccessCount": IntTag(0), "isMovable": ByteTag(0),
                 "LastOutput": StringTag(""), "LastOutputParams": ListTag([]),
                 "TrackOutput": ByteTag(0), "auto": ByteTag(auto), "powered": ByteTag(0),
@@ -199,8 +199,8 @@ def build():
             room = {"index": i, "origin": [ox, oz], "entry": entry(i), "question": q,
                     "answer": answer, "routes": []}
             manifest["rooms"].append(room)
-            choices = "   ".join(f'{label} {val}§r' for label, val in zip(["§c←", "§e↑", "§a→"], q["choices"]))
-            chain(ox + 1, oz + 2, [f'execute as {room_sel} run titleraw @s actionbar {raw(f"{i+1}/10   {expr}   {choices}   いたを ふもう")}'], delay=20)
+            choices = "   ".join(f'[{val}]' for val in q["choices"])
+            chain(ox + 1, oz + 2, [f'execute as {room_sel} run titleraw @s actionbar {raw(f"{i+1}/10   {expr}   {choices}   STEP ON A PLATE")}'], delay=20)
             # Broad, high-contrast display panels and 5-block-tall arithmetic.
             for x in range(ox + 1, ox + 31):
                 for y in range(73, 80):
@@ -218,12 +218,12 @@ def build():
                         put(x, y, oz + 31, "wool", color=colors[c])
                 pixel_text(str(q["choices"][c]), ox + center, 66, oz + 31, "white" if c == 0 else "black")
                 floor_arrow(ox + center, oz + 12, colors[c])
-                sign(ox + center, 72, oz + 30, f"{['←','↑','→'][c]} こたえ {q['choices'][c]}\nしたの いたを\nふんでね！\nクリック なし")
+                sign(ox + center, 72, oz + 30, f"{q['choices'][c]}\nSTEP ON\nTHE PLATE\nNO CLICK")
                 put(ox + center, 65, oz + 26, "stone_pressure_plate", redstone_signal=0)
                 selector = f"@a[x={ox+center},y=65,z={oz+26},dx=0,dy=2,dz=0]"
                 correct = q["choices"][c] == answer
                 dest = entry(i + 1 if correct else i)
-                feedback = "せいかい！" if correct else "もういちど！"
+                feedback = "OK!" if correct else "TRY AGAIN"
                 sound = "random.levelup" if correct else "note.bass"
                 commands = [f'execute as {selector} run titleraw @s title {raw(feedback)}',
                             f'execute as {selector} at @s run playsound {sound} @s ~ ~ ~ 0.5 1',
@@ -232,15 +232,15 @@ def build():
                 room["routes"].append({"choice": q["choices"][c], "correct": correct,
                     "trigger": [ox + center, 65, oz + 26, 0, 2, 0], "plate": [ox + center, 65, oz + 26],
                     "tp_command_position": [ox + center, 61, oz + 26], "destination": dest})
-            sign(ox + 16, 67, oz + 1, "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう！", facing=3)
+            sign(ox + 16, 67, oz + 1, "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE", facing=3)
         else:
             goal_sel = room_sel[:-1] + ",tag=!maze_goal]"
             chain(ox + 16, oz + 3, [
-                f'execute as {goal_sel} run titleraw @s subtitle {raw("10もん クリア！ よく がんばったね！")}',
-                f'execute as {goal_sel} run titleraw @s title {raw("おめでとう！")}',
+                f'execute as {goal_sel} run titleraw @s subtitle {raw("10/10 CLEAR!")}',
+                f'execute as {goal_sel} run titleraw @s title {raw("GREAT!")}',
                 f'execute as {goal_sel} at @s run playsound random.levelup @s ~ ~ ~ 1 1',
                 f'execute as {goal_sel} run tag @s add maze_goal'])
-            sign(ox + 16, 67, oz + 30, "ゴール！\n10もん クリア\nおめでとう！\nまた あそぼう")
+            sign(ox + 16, 67, oz + 30, "GOAL!\n10/10 CLEAR\nGREAT!\nPLAY AGAIN")
             for x in range(ox + 1, ox + 31):
                 for y in range(73, 80):
                     put(x, y, oz + 31, "wool", color="white")
@@ -250,7 +250,7 @@ def build():
                     put(x, 64, z, "gold_block")
             chain(ox + 1, oz + 3, [f'execute if entity {room_sel} run particle minecraft:totem_particle {ox+16.5} 67 {oz+8.5}'], delay=30)
             restart = f"@a[x={ox+5},y=65,z={oz+26},dx=0,dy=2,dz=0]"
-            sign(ox + 5, 67, oz + 30, "もういちど\nあそぶときは\nあおい やじるしの\nいたを ふもう")
+            sign(ox + 5, 67, oz + 30, "PLAY AGAIN\nBLUE ARROW\nSTEP ON\nTHE PLATE")
             for x in range(ox + 3, ox + 8):
                 for z in range(oz + 19, oz + 31):
                     put(x, 64, z, "wool", color="light_blue")

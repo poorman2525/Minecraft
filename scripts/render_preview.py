@@ -19,7 +19,7 @@ def main():
         for y in range(65, 80):
             b = level.get_version_block(x, y, 31, "minecraft:overworld", ("bedrock", (1, 19, 50)))[0]
             color = COLORS.get(b.properties["color"].py_str, "#aaa59b") if "color" in b.properties else "#aaa59b"
-            left, top = 36 + x * cell, 60 + (79 - y) * cell
+            left, top = 36 + (31 - x) * cell, 60 + (79 - y) * cell
             draw.rectangle((left, top, left + cell - 1, top + cell - 1), fill=color)
     draw.text((36, 440), "Floor: arrows lead to the three pressure plates", font=font, fill="#202027")
     small = 10
@@ -27,7 +27,7 @@ def main():
         for z in range(32):
             b = level.get_version_block(x, 64, z, "minecraft:overworld", ("bedrock", (1, 19, 50)))[0]
             color = COLORS.get(b.properties["color"].py_str, "#aaa59b") if "color" in b.properties else "#dccda9"
-            left, top = 260 + x * small, 490 + (31 - z) * small
+            left, top = 260 + (31 - x) * small, 490 + (31 - z) * small
             draw.rectangle((left, top, left + small - 1, top + small - 1), fill=color)
             above = level.get_version_block(x, 65, z, "minecraft:overworld", ("bedrock", (1, 19, 50)))[0]
             if above.base_name == "stone_pressure_plate":
