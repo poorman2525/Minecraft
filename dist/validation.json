@@ -1,0 +1,35 @@
+{
+  "artifact": "math_maze_v1.mcworld",
+  "sha256": "f186d45e3d4acbb5a15dff443af98d226186e2bd8316919e32a8abc453865a8a",
+  "size_bytes": 16251,
+  "static_validation": "PASS",
+  "counts": {
+    "questions": 10,
+    "addition": 5,
+    "subtraction": 5,
+    "routes": 30,
+    "correct_routes": 10,
+    "retry_routes": 20,
+    "rooms_including_goal": 11,
+    "chunks": 30,
+    "command_blocks": 107,
+    "signs": 42
+  },
+  "checks": [
+    "ZIP CRC, root paths, required world files, no scripts or packs",
+    "Little-endian level.dat and header, adventure/peaceful/spawn/commands settings",
+    "All 30 prebuilt chunks readable and finalized in stored LevelDB",
+    "All saved command/sign NBT, downward chains, always-active flags and text checked",
+    "All 11 rooms fully enclosed, floors/roofs/walls stored; all arrivals safe",
+    "Arithmetic, 30 reachable choice routes, 10 correct advances and 20 retries checked against saved TP commands",
+    "Goal congratulations, sound/particle commands and replay route present"
+  ],
+  "minecraft_windows_import": "NOT_TESTED",
+  "minecraft_gameplay": "NOT_TESTED",
+  "bedrock_dedicated_server": "SEE_SEPARATE_SERVER_VALIDATION_REPORT",
+  "limitations": [
+    "No Minecraft for Windows client is available in this environment.",
+    "This static validator does not execute commands; see the separate server report.",
+    "Sign rendering, first spawn, ticking/teleport timing, sounds and particles require Windows Bedrock playtesting."
+  ]
+}

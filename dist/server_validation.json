@@ -1,0 +1,35 @@
+{
+  "artifact": "math_maze_v1.mcworld",
+  "artifact_sha256": "f186d45e3d4acbb5a15dff443af98d226186e2bd8316919e32a8abc453865a8a",
+  "test_date": "2026-10-08",
+  "server": "Official Minecraft Bedrock Dedicated Server Linux 1.26.52.3",
+  "source": "https://www.minecraft.net/en-us/download/server/bedrock",
+  "original_world_load": "PASS",
+  "original_world_pack_stack": "None",
+  "original_world_entry_block_tests": 33,
+  "original_world_commands_submitted": 107,
+  "original_world_console_syntax_errors": 0,
+  "original_world_no_player_results": {
+    "no_targets": 106,
+    "if_entity_failed": 1
+  },
+  "particle_command_request": "ACCEPTED, visual appearance not tested",
+  "surrogate_routing": {
+    "result": "PASS",
+    "routes": 30,
+    "correct": 10,
+    "retry": 20,
+    "modified_copy": true,
+    "modification": "All @a[...] region selectors replaced with @e[type=armor_stand,name=maze_probe,...]. Original TP commands, auto flags, block placement, chain states and destinations retained.",
+    "arrivals_confirmed": 30,
+    "errors": 0
+  },
+  "minecraft_windows_import": "NOT_TESTED",
+  "minecraft_windows_gameplay": "NOT_TESTED",
+  "limitations": [
+    "No Windows client or real player connected.",
+    "Console acceptance without a player does not confirm all player-dependent command effects.",
+    "Surrogate routing does not test player-specific selector/permissions, first spawn, visuals, audio, save/resume or child usability.",
+    "Test worlds were copies; the distribution file was not replaced with server-upgraded or surrogate data."
+  ]
+}

@@ -1,0 +1,2306 @@
+{
+  "format_version": [
+    1,
+    19,
+    50
+  ],
+  "spawn": [
+    8.5,
+    65,
+    3.5
+  ],
+  "rooms": [
+    {
+      "index": 0,
+      "origin": [
+        0,
+        0
+      ],
+      "entry": [
+        8.5,
+        65,
+        3.5
+      ],
+      "question": {
+        "a": 2,
+        "op": "+",
+        "b": 3,
+        "choices": [
+          4,
+          5,
+          6
+        ]
+      },
+      "answer": 5,
+      "routes": [
+        {
+          "choice": 4,
+          "correct": false,
+          "trigger": [
+            2,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            8.5,
+            65,
+            3.5
+          ]
+        },
+        {
+          "choice": 5,
+          "correct": true,
+          "trigger": [
+            7,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            24.5,
+            65,
+            3.5
+          ]
+        },
+        {
+          "choice": 6,
+          "correct": false,
+          "trigger": [
+            12,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            8.5,
+            65,
+            3.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "origin": [
+        16,
+        0
+      ],
+      "entry": [
+        24.5,
+        65,
+        3.5
+      ],
+      "question": {
+        "a": 7,
+        "op": "-",
+        "b": 2,
+        "choices": [
+          5,
+          4,
+          6
+        ]
+      },
+      "answer": 5,
+      "routes": [
+        {
+          "choice": 5,
+          "correct": true,
+          "trigger": [
+            18,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            40.5,
+            65,
+            3.5
+          ]
+        },
+        {
+          "choice": 4,
+          "correct": false,
+          "trigger": [
+            23,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            24.5,
+            65,
+            3.5
+          ]
+        },
+        {
+          "choice": 6,
+          "correct": false,
+          "trigger": [
+            28,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            24.5,
+            65,
+            3.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "origin": [
+        32,
+        0
+      ],
+      "entry": [
+        40.5,
+        65,
+        3.5
+      ],
+      "question": {
+        "a": 4,
+        "op": "+",
+        "b": 4,
+        "choices": [
+          7,
+          9,
+          8
+        ]
+      },
+      "answer": 8,
+      "routes": [
+        {
+          "choice": 7,
+          "correct": false,
+          "trigger": [
+            34,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            40.5,
+            65,
+            3.5
+          ]
+        },
+        {
+          "choice": 9,
+          "correct": false,
+          "trigger": [
+            39,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            40.5,
+            65,
+            3.5
+          ]
+        },
+        {
+          "choice": 8,
+          "correct": true,
+          "trigger": [
+            44,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            56.5,
+            65,
+            3.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "origin": [
+        48,
+        0
+      ],
+      "entry": [
+        56.5,
+        65,
+        3.5
+      ],
+      "question": {
+        "a": 9,
+        "op": "-",
+        "b": 3,
+        "choices": [
+          5,
+          6,
+          7
+        ]
+      },
+      "answer": 6,
+      "routes": [
+        {
+          "choice": 5,
+          "correct": false,
+          "trigger": [
+            50,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            56.5,
+            65,
+            3.5
+          ]
+        },
+        {
+          "choice": 6,
+          "correct": true,
+          "trigger": [
+            55,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            8.5,
+            65,
+            19.5
+          ]
+        },
+        {
+          "choice": 7,
+          "correct": false,
+          "trigger": [
+            60,
+            65,
+            12,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            56.5,
+            65,
+            3.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "origin": [
+        0,
+        16
+      ],
+      "entry": [
+        8.5,
+        65,
+        19.5
+      ],
+      "question": {
+        "a": 6,
+        "op": "+",
+        "b": 3,
+        "choices": [
+          9,
+          8,
+          10
+        ]
+      },
+      "answer": 9,
+      "routes": [
+        {
+          "choice": 9,
+          "correct": true,
+          "trigger": [
+            2,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            24.5,
+            65,
+            19.5
+          ]
+        },
+        {
+          "choice": 8,
+          "correct": false,
+          "trigger": [
+            7,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            8.5,
+            65,
+            19.5
+          ]
+        },
+        {
+          "choice": 10,
+          "correct": false,
+          "trigger": [
+            12,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            8.5,
+            65,
+            19.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "origin": [
+        16,
+        16
+      ],
+      "entry": [
+        24.5,
+        65,
+        19.5
+      ],
+      "question": {
+        "a": 10,
+        "op": "-",
+        "b": 4,
+        "choices": [
+          7,
+          5,
+          6
+        ]
+      },
+      "answer": 6,
+      "routes": [
+        {
+          "choice": 7,
+          "correct": false,
+          "trigger": [
+            18,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            24.5,
+            65,
+            19.5
+          ]
+        },
+        {
+          "choice": 5,
+          "correct": false,
+          "trigger": [
+            23,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            24.5,
+            65,
+            19.5
+          ]
+        },
+        {
+          "choice": 6,
+          "correct": true,
+          "trigger": [
+            28,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            40.5,
+            65,
+            19.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "origin": [
+        32,
+        16
+      ],
+      "entry": [
+        40.5,
+        65,
+        19.5
+      ],
+      "question": {
+        "a": 8,
+        "op": "+",
+        "b": 5,
+        "choices": [
+          12,
+          13,
+          14
+        ]
+      },
+      "answer": 13,
+      "routes": [
+        {
+          "choice": 12,
+          "correct": false,
+          "trigger": [
+            34,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            40.5,
+            65,
+            19.5
+          ]
+        },
+        {
+          "choice": 13,
+          "correct": true,
+          "trigger": [
+            39,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            56.5,
+            65,
+            19.5
+          ]
+        },
+        {
+          "choice": 14,
+          "correct": false,
+          "trigger": [
+            44,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            40.5,
+            65,
+            19.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "origin": [
+        48,
+        16
+      ],
+      "entry": [
+        56.5,
+        65,
+        19.5
+      ],
+      "question": {
+        "a": 12,
+        "op": "-",
+        "b": 5,
+        "choices": [
+          7,
+          6,
+          8
+        ]
+      },
+      "answer": 7,
+      "routes": [
+        {
+          "choice": 7,
+          "correct": true,
+          "trigger": [
+            50,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            8.5,
+            65,
+            35.5
+          ]
+        },
+        {
+          "choice": 6,
+          "correct": false,
+          "trigger": [
+            55,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            56.5,
+            65,
+            19.5
+          ]
+        },
+        {
+          "choice": 8,
+          "correct": false,
+          "trigger": [
+            60,
+            65,
+            28,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            56.5,
+            65,
+            19.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "origin": [
+        0,
+        32
+      ],
+      "entry": [
+        8.5,
+        65,
+        35.5
+      ],
+      "question": {
+        "a": 7,
+        "op": "+",
+        "b": 6,
+        "choices": [
+          12,
+          14,
+          13
+        ]
+      },
+      "answer": 13,
+      "routes": [
+        {
+          "choice": 12,
+          "correct": false,
+          "trigger": [
+            2,
+            65,
+            44,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            8.5,
+            65,
+            35.5
+          ]
+        },
+        {
+          "choice": 14,
+          "correct": false,
+          "trigger": [
+            7,
+            65,
+            44,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            8.5,
+            65,
+            35.5
+          ]
+        },
+        {
+          "choice": 13,
+          "correct": true,
+          "trigger": [
+            12,
+            65,
+            44,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            24.5,
+            65,
+            35.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "origin": [
+        16,
+        32
+      ],
+      "entry": [
+        24.5,
+        65,
+        35.5
+      ],
+      "question": {
+        "a": 14,
+        "op": "-",
+        "b": 8,
+        "choices": [
+          5,
+          6,
+          7
+        ]
+      },
+      "answer": 6,
+      "routes": [
+        {
+          "choice": 5,
+          "correct": false,
+          "trigger": [
+            18,
+            65,
+            44,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            24.5,
+            65,
+            35.5
+          ]
+        },
+        {
+          "choice": 6,
+          "correct": true,
+          "trigger": [
+            23,
+            65,
+            44,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            40.5,
+            65,
+            35.5
+          ]
+        },
+        {
+          "choice": 7,
+          "correct": false,
+          "trigger": [
+            28,
+            65,
+            44,
+            2,
+            2,
+            2
+          ],
+          "destination": [
+            24.5,
+            65,
+            35.5
+          ]
+        }
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "position": [
+        1,
+        62,
+        2
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=1,y=65,z=1,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"1/10   2 + 3 = ?   ひだり:4   まんなか:5   みぎ:6\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        3,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=2,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        3,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=2,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        3,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=2,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 8.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        8,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=7,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        8,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=7,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        8,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=7,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 24.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        13,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=12,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        13,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=12,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        13,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=12,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 8.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        17,
+        62,
+        2
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=17,y=65,z=1,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"2/10   7 - 2 = ?   ひだり:5   まんなか:4   みぎ:6\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        19,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=18,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        19,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=18,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        19,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=18,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 40.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        24,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=23,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        24,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=23,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        24,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=23,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 24.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        29,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=28,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        29,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=28,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        29,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=28,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 24.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        33,
+        62,
+        2
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=33,y=65,z=1,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"3/10   4 + 4 = ?   ひだり:7   まんなか:9   みぎ:8\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        35,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=34,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        35,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=34,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        35,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=34,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 40.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=39,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=39,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=39,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 40.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        45,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=44,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        45,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=44,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        45,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=44,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 56.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        49,
+        62,
+        2
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=49,y=65,z=1,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"4/10   9 - 3 = ?   ひだり:5   まんなか:6   みぎ:7\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        51,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=50,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        51,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=50,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        51,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=50,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 56.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        56,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=55,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        56,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=55,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        56,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=55,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 8.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        61,
+        62,
+        12
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=60,y=65,z=12,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        61,
+        61,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=60,y=65,z=12,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        61,
+        60,
+        12
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=60,y=65,z=12,dx=2,dy=2,dz=2] run tp @s 56.5 65 3.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        1,
+        62,
+        18
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=1,y=65,z=17,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"5/10   6 + 3 = ?   ひだり:9   まんなか:8   みぎ:10\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        3,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=2,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        3,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=2,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        3,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=2,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 24.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        8,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=7,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        8,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=7,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        8,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=7,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 8.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        13,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=12,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        13,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=12,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        13,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=12,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 8.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        17,
+        62,
+        18
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=17,y=65,z=17,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"6/10   10 - 4 = ?   ひだり:7   まんなか:5   みぎ:6\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        19,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=18,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        19,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=18,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        19,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=18,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 24.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        24,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=23,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        24,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=23,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        24,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=23,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 24.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        29,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=28,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        29,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=28,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        29,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=28,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 40.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        33,
+        62,
+        18
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=33,y=65,z=17,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"7/10   8 + 5 = ?   ひだり:12   まんなか:13   みぎ:14\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        35,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=34,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        35,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=34,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        35,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=34,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 40.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=39,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=39,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=39,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 56.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        45,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=44,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        45,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=44,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        45,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=44,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 40.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        49,
+        62,
+        18
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=49,y=65,z=17,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"8/10   12 - 5 = ?   ひだり:7   まんなか:6   みぎ:8\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        51,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=50,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        51,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=50,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        51,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=50,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 8.5 65 35.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        56,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=55,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        56,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=55,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        56,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=55,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 56.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        61,
+        62,
+        28
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=60,y=65,z=28,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        61,
+        61,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=60,y=65,z=28,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        61,
+        60,
+        28
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=60,y=65,z=28,dx=2,dy=2,dz=2] run tp @s 56.5 65 19.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        1,
+        62,
+        34
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=1,y=65,z=33,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"9/10   7 + 6 = ?   ひだり:12   まんなか:14   みぎ:13\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        3,
+        62,
+        44
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=2,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        3,
+        61,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=2,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        3,
+        60,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=2,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 8.5 65 35.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        8,
+        62,
+        44
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=7,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        8,
+        61,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=7,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        8,
+        60,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=7,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 8.5 65 35.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        13,
+        62,
+        44
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=12,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        13,
+        61,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=12,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        13,
+        60,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=12,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 24.5 65 35.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        17,
+        62,
+        34
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=17,y=65,z=33,dx=13,dy=3,dz=13] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"10/10   14 - 8 = ?   ひだり:5   まんなか:6   みぎ:7\"}]}",
+      "delay": 20
+    },
+    {
+      "position": [
+        19,
+        62,
+        44
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=18,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        19,
+        61,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=18,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        19,
+        60,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=18,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 24.5 65 35.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        24,
+        62,
+        44
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=23,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"せいかい！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        24,
+        61,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=23,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound random.levelup @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        24,
+        60,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=23,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 40.5 65 35.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        29,
+        62,
+        44
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=28,y=65,z=44,dx=2,dy=2,dz=2] run titleraw @s title {\"rawtext\":[{\"text\":\"もういちど！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        29,
+        61,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=28,y=65,z=44,dx=2,dy=2,dz=2] at @s run playsound note.bass @s ~ ~ ~ 0.5 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        29,
+        60,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=28,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 24.5 65 35.5 0 0",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        62,
+        35
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=33,y=65,z=33,dx=13,dy=3,dz=13,tag=!maze_goal] run titleraw @s subtitle {\"rawtext\":[{\"text\":\"10もん クリア！ よく がんばったね！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        61,
+        35
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=33,y=65,z=33,dx=13,dy=3,dz=13,tag=!maze_goal] run titleraw @s title {\"rawtext\":[{\"text\":\"おめでとう！\"}]}",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        60,
+        35
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=33,y=65,z=33,dx=13,dy=3,dz=13,tag=!maze_goal] at @s run playsound random.levelup @s ~ ~ ~ 1 1",
+      "delay": 0
+    },
+    {
+      "position": [
+        40,
+        59,
+        35
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=33,y=65,z=33,dx=13,dy=3,dz=13,tag=!maze_goal] run tag @s add maze_goal",
+      "delay": 0
+    },
+    {
+      "position": [
+        33,
+        62,
+        35
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute if entity @a[x=33,y=65,z=33,dx=13,dy=3,dz=13] run particle minecraft:totem_particle 40.5 67 40.5",
+      "delay": 30
+    },
+    {
+      "position": [
+        34,
+        62,
+        44
+      ],
+      "kind": "repeating_command_block",
+      "command": "execute as @a[x=33,y=65,z=44,dx=2,dy=2,dz=2] run tag @s remove maze_goal",
+      "delay": 0
+    },
+    {
+      "position": [
+        34,
+        61,
+        44
+      ],
+      "kind": "chain_command_block",
+      "command": "execute as @a[x=33,y=65,z=44,dx=2,dy=2,dz=2] run tp @s 8.5 65 3.5 0 0",
+      "delay": 0
+    }
+  ],
+  "signs": [
+    {
+      "position": [
+        3,
+        67,
+        14
+      ],
+      "text": "1/10\n2 + 3 = ?\nこたえ 4\nこのみちへ"
+    },
+    {
+      "position": [
+        8,
+        67,
+        14
+      ],
+      "text": "1/10\n2 + 3 = ?\nこたえ 5\nこのみちへ"
+    },
+    {
+      "position": [
+        13,
+        67,
+        14
+      ],
+      "text": "1/10\n2 + 3 = ?\nこたえ 6\nこのみちへ"
+    },
+    {
+      "position": [
+        7,
+        67,
+        1
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        19,
+        67,
+        14
+      ],
+      "text": "2/10\n7 - 2 = ?\nこたえ 5\nこのみちへ"
+    },
+    {
+      "position": [
+        24,
+        67,
+        14
+      ],
+      "text": "2/10\n7 - 2 = ?\nこたえ 4\nこのみちへ"
+    },
+    {
+      "position": [
+        29,
+        67,
+        14
+      ],
+      "text": "2/10\n7 - 2 = ?\nこたえ 6\nこのみちへ"
+    },
+    {
+      "position": [
+        23,
+        67,
+        1
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        35,
+        67,
+        14
+      ],
+      "text": "3/10\n4 + 4 = ?\nこたえ 7\nこのみちへ"
+    },
+    {
+      "position": [
+        40,
+        67,
+        14
+      ],
+      "text": "3/10\n4 + 4 = ?\nこたえ 9\nこのみちへ"
+    },
+    {
+      "position": [
+        45,
+        67,
+        14
+      ],
+      "text": "3/10\n4 + 4 = ?\nこたえ 8\nこのみちへ"
+    },
+    {
+      "position": [
+        39,
+        67,
+        1
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        51,
+        67,
+        14
+      ],
+      "text": "4/10\n9 - 3 = ?\nこたえ 5\nこのみちへ"
+    },
+    {
+      "position": [
+        56,
+        67,
+        14
+      ],
+      "text": "4/10\n9 - 3 = ?\nこたえ 6\nこのみちへ"
+    },
+    {
+      "position": [
+        61,
+        67,
+        14
+      ],
+      "text": "4/10\n9 - 3 = ?\nこたえ 7\nこのみちへ"
+    },
+    {
+      "position": [
+        55,
+        67,
+        1
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        3,
+        67,
+        30
+      ],
+      "text": "5/10\n6 + 3 = ?\nこたえ 9\nこのみちへ"
+    },
+    {
+      "position": [
+        8,
+        67,
+        30
+      ],
+      "text": "5/10\n6 + 3 = ?\nこたえ 8\nこのみちへ"
+    },
+    {
+      "position": [
+        13,
+        67,
+        30
+      ],
+      "text": "5/10\n6 + 3 = ?\nこたえ 10\nこのみちへ"
+    },
+    {
+      "position": [
+        7,
+        67,
+        17
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        19,
+        67,
+        30
+      ],
+      "text": "6/10\n10 - 4 = ?\nこたえ 7\nこのみちへ"
+    },
+    {
+      "position": [
+        24,
+        67,
+        30
+      ],
+      "text": "6/10\n10 - 4 = ?\nこたえ 5\nこのみちへ"
+    },
+    {
+      "position": [
+        29,
+        67,
+        30
+      ],
+      "text": "6/10\n10 - 4 = ?\nこたえ 6\nこのみちへ"
+    },
+    {
+      "position": [
+        23,
+        67,
+        17
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        35,
+        67,
+        30
+      ],
+      "text": "7/10\n8 + 5 = ?\nこたえ 12\nこのみちへ"
+    },
+    {
+      "position": [
+        40,
+        67,
+        30
+      ],
+      "text": "7/10\n8 + 5 = ?\nこたえ 13\nこのみちへ"
+    },
+    {
+      "position": [
+        45,
+        67,
+        30
+      ],
+      "text": "7/10\n8 + 5 = ?\nこたえ 14\nこのみちへ"
+    },
+    {
+      "position": [
+        39,
+        67,
+        17
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        51,
+        67,
+        30
+      ],
+      "text": "8/10\n12 - 5 = ?\nこたえ 7\nこのみちへ"
+    },
+    {
+      "position": [
+        56,
+        67,
+        30
+      ],
+      "text": "8/10\n12 - 5 = ?\nこたえ 6\nこのみちへ"
+    },
+    {
+      "position": [
+        61,
+        67,
+        30
+      ],
+      "text": "8/10\n12 - 5 = ?\nこたえ 8\nこのみちへ"
+    },
+    {
+      "position": [
+        55,
+        67,
+        17
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        3,
+        67,
+        46
+      ],
+      "text": "9/10\n7 + 6 = ?\nこたえ 12\nこのみちへ"
+    },
+    {
+      "position": [
+        8,
+        67,
+        46
+      ],
+      "text": "9/10\n7 + 6 = ?\nこたえ 14\nこのみちへ"
+    },
+    {
+      "position": [
+        13,
+        67,
+        46
+      ],
+      "text": "9/10\n7 + 6 = ?\nこたえ 13\nこのみちへ"
+    },
+    {
+      "position": [
+        7,
+        67,
+        33
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        19,
+        67,
+        46
+      ],
+      "text": "10/10\n14 - 8 = ?\nこたえ 5\nこのみちへ"
+    },
+    {
+      "position": [
+        24,
+        67,
+        46
+      ],
+      "text": "10/10\n14 - 8 = ?\nこたえ 6\nこのみちへ"
+    },
+    {
+      "position": [
+        29,
+        67,
+        46
+      ],
+      "text": "10/10\n14 - 8 = ?\nこたえ 7\nこのみちへ"
+    },
+    {
+      "position": [
+        23,
+        67,
+        33
+      ],
+      "text": "さんすう めいろ\nW で あるく\nこたえの みちへ\nすすもう！"
+    },
+    {
+      "position": [
+        40,
+        67,
+        46
+      ],
+      "text": "ゴール！\n10もん クリア\nおめでとう！\nまた あそぼう"
+    },
+    {
+      "position": [
+        34,
+        67,
+        46
+      ],
+      "text": "もういちど\nあそぶときは\nあおい みちへ\nあるこう"
+    }
+  ],
+  "prebuilt_chunks": [
+    [
+      -1,
+      -1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      -1,
+      2
+    ],
+    [
+      -1,
+      3
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      -1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      -1
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      -1
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      3
+    ]
+  ]
+}
