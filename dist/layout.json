@@ -1,5 +1,5 @@
 {
-  "artifact": "math_maze_v3.mcworld",
+  "artifact": "math_maze_v4.mcworld",
   "format_version": [
     1,
     19,
@@ -7830,7 +7830,7 @@
         2
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=1,y=65,z=1,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"1/10   2 + 3 = ?   [4]   [5]   [6]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=1,y=65,z=1,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"1/10   2 + 3 = ?   [4]   [5]   [6]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -7841,7 +7841,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=26,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=26,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -7874,7 +7874,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=16,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=16,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -7907,7 +7907,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=5,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=5,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -7940,7 +7940,7 @@
         2
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=33,y=65,z=1,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"2/10   7 - 2 = ?   [5]   [4]   [6]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=33,y=65,z=1,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"2/10   7 - 2 = ?   [5]   [4]   [6]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -7951,7 +7951,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=58,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=58,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -7984,7 +7984,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=48,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=48,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8017,7 +8017,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=37,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=37,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8050,7 +8050,7 @@
         2
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=65,y=65,z=1,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"3/10   4 + 4 = ?   [7]   [9]   [8]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=65,y=65,z=1,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"3/10   4 + 4 = ?   [7]   [9]   [8]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -8061,7 +8061,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=90,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=90,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8094,7 +8094,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=80,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=80,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8127,7 +8127,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=69,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=69,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8160,7 +8160,7 @@
         2
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=97,y=65,z=1,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"4/10   9 - 3 = ?   [5]   [6]   [7]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=97,y=65,z=1,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"4/10   9 - 3 = ?   [5]   [6]   [7]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -8171,7 +8171,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=122,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=122,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8204,7 +8204,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=112,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=112,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8237,7 +8237,7 @@
         26
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=101,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=101,y=65,z=26,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8270,7 +8270,7 @@
         34
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=1,y=65,z=33,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"5/10   6 + 3 = ?   [9]   [8]   [10]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=1,y=65,z=33,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"5/10   6 + 3 = ?   [9]   [8]   [10]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -8281,7 +8281,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=26,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=26,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8314,7 +8314,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=16,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=16,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8347,7 +8347,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=5,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=5,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8380,7 +8380,7 @@
         34
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=33,y=65,z=33,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"6/10   10 - 4 = ?   [7]   [5]   [6]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=33,y=65,z=33,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"6/10   10 - 4 = ?   [7]   [5]   [6]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -8391,7 +8391,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=58,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=58,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8424,7 +8424,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=48,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=48,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8457,7 +8457,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=37,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=37,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8490,7 +8490,7 @@
         34
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=65,y=65,z=33,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"7/10   8 + 5 = ?   [12]   [13]   [14]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=65,y=65,z=33,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"7/10   8 + 5 = ?   [12]   [13]   [14]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -8501,7 +8501,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=90,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=90,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8534,7 +8534,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=80,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=80,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8567,7 +8567,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=69,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=69,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8600,7 +8600,7 @@
         34
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=97,y=65,z=33,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"8/10   12 - 5 = ?   [7]   [6]   [8]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=97,y=65,z=33,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"8/10   12 - 5 = ?   [7]   [6]   [8]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -8611,7 +8611,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=122,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=122,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8644,7 +8644,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=112,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=112,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8677,7 +8677,7 @@
         58
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=101,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=101,y=65,z=58,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8710,7 +8710,7 @@
         66
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=1,y=65,z=65,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"9/10   7 + 6 = ?   [12]   [14]   [13]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=1,y=65,z=65,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"9/10   7 + 6 = ?   [12]   [14]   [13]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -8721,7 +8721,7 @@
         90
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=26,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=26,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8754,7 +8754,7 @@
         90
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=16,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=16,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8787,7 +8787,7 @@
         90
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=5,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=5,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8820,7 +8820,7 @@
         66
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=33,y=65,z=65,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"10/10   14 - 8 = ?   [5]   [6]   [7]   STEP ON A PLATE\"}]}",
+      "command": "execute as @a[x=33,y=65,z=65,dx=29,dy=14,dz=29] run titleraw @s actionbar {\"rawtext\":[{\"text\":\"10/10   14 - 8 = ?   [5]   [6]   [7]   \\u3044\\u305f\\u3092 \\u3075\\u3082\\u3046\"}]}",
       "delay": 20,
       "auto": 1
     },
@@ -8831,7 +8831,7 @@
         90
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=58,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=58,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8864,7 +8864,7 @@
         90
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=48,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"OK!\"}]}",
+      "command": "execute as @a[x=48,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u305b\\u3044\\u304b\\u3044\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8897,7 +8897,7 @@
         90
       ],
       "kind": "command_block",
-      "command": "execute as @a[x=37,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"TRY AGAIN\"}]}",
+      "command": "execute as @a[x=37,y=65,z=90,dx=0,dy=2,dz=0] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u3082\\u3046\\u3044\\u3061\\u3069\"}]}",
       "delay": 0,
       "auto": 0
     },
@@ -8930,7 +8930,7 @@
         67
       ],
       "kind": "repeating_command_block",
-      "command": "execute as @a[x=65,y=65,z=65,dx=29,dy=14,dz=29,tag=!maze_goal] run titleraw @s subtitle {\"rawtext\":[{\"text\":\"10/10 CLEAR!\"}]}",
+      "command": "execute as @a[x=65,y=65,z=65,dx=29,dy=14,dz=29,tag=!maze_goal] run titleraw @s subtitle {\"rawtext\":[{\"text\":\"10\\u3082\\u3093 \\u3067\\u304d\\u305f\"}]}",
       "delay": 0,
       "auto": 1
     },
@@ -8941,7 +8941,7 @@
         67
       ],
       "kind": "chain_command_block",
-      "command": "execute as @a[x=65,y=65,z=65,dx=29,dy=14,dz=29,tag=!maze_goal] run titleraw @s title {\"rawtext\":[{\"text\":\"GREAT!\"}]}",
+      "command": "execute as @a[x=65,y=65,z=65,dx=29,dy=14,dz=29,tag=!maze_goal] run titleraw @s title {\"rawtext\":[{\"text\":\"\\u304a\\u3081\\u3067\\u3068\\u3046\"}]}",
       "delay": 0,
       "auto": 1
     },
@@ -9008,7 +9008,7 @@
         72,
         30
       ],
-      "text": "4\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "4\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9016,7 +9016,7 @@
         72,
         30
       ],
-      "text": "5\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "5\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9024,7 +9024,7 @@
         72,
         30
       ],
-      "text": "6\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "6\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9032,7 +9032,7 @@
         67,
         1
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9040,7 +9040,7 @@
         72,
         30
       ],
-      "text": "5\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "5\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9048,7 +9048,7 @@
         72,
         30
       ],
-      "text": "4\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "4\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9056,7 +9056,7 @@
         72,
         30
       ],
-      "text": "6\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "6\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9064,7 +9064,7 @@
         67,
         1
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9072,7 +9072,7 @@
         72,
         30
       ],
-      "text": "7\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "7\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9080,7 +9080,7 @@
         72,
         30
       ],
-      "text": "9\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "9\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9088,7 +9088,7 @@
         72,
         30
       ],
-      "text": "8\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "8\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9096,7 +9096,7 @@
         67,
         1
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9104,7 +9104,7 @@
         72,
         30
       ],
-      "text": "5\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "5\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9112,7 +9112,7 @@
         72,
         30
       ],
-      "text": "6\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "6\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9120,7 +9120,7 @@
         72,
         30
       ],
-      "text": "7\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "7\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9128,7 +9128,7 @@
         67,
         1
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9136,7 +9136,7 @@
         72,
         62
       ],
-      "text": "9\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "9\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9144,7 +9144,7 @@
         72,
         62
       ],
-      "text": "8\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "8\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9152,7 +9152,7 @@
         72,
         62
       ],
-      "text": "10\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "10\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9160,7 +9160,7 @@
         67,
         33
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9168,7 +9168,7 @@
         72,
         62
       ],
-      "text": "7\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "7\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9176,7 +9176,7 @@
         72,
         62
       ],
-      "text": "5\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "5\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9184,7 +9184,7 @@
         72,
         62
       ],
-      "text": "6\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "6\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9192,7 +9192,7 @@
         67,
         33
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9200,7 +9200,7 @@
         72,
         62
       ],
-      "text": "12\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "12\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9208,7 +9208,7 @@
         72,
         62
       ],
-      "text": "13\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "13\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9216,7 +9216,7 @@
         72,
         62
       ],
-      "text": "14\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "14\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9224,7 +9224,7 @@
         67,
         33
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9232,7 +9232,7 @@
         72,
         62
       ],
-      "text": "7\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "7\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9240,7 +9240,7 @@
         72,
         62
       ],
-      "text": "6\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "6\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9248,7 +9248,7 @@
         72,
         62
       ],
-      "text": "8\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "8\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9256,7 +9256,7 @@
         67,
         33
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9264,7 +9264,7 @@
         72,
         94
       ],
-      "text": "12\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "12\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9272,7 +9272,7 @@
         72,
         94
       ],
-      "text": "14\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "14\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9280,7 +9280,7 @@
         72,
         94
       ],
-      "text": "13\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "13\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9288,7 +9288,7 @@
         67,
         65
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9296,7 +9296,7 @@
         72,
         94
       ],
-      "text": "5\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "5\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9304,7 +9304,7 @@
         72,
         94
       ],
-      "text": "6\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "6\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9312,7 +9312,7 @@
         72,
         94
       ],
-      "text": "7\nSTEP ON\nTHE PLATE\nNO CLICK"
+      "text": "7\nここを ふもう\nいたを ふんでね\nふむだけで いいよ"
     },
     {
       "position": [
@@ -9320,7 +9320,7 @@
         67,
         65
       ],
-      "text": "MATH MAZE\nW = WALK\nFOLLOW ARROW\nSTEP ON PLATE"
+      "text": "さんすう めいろ\nW で あるく\nやじるしの さきの\nいたを ふもう"
     },
     {
       "position": [
@@ -9328,7 +9328,7 @@
         67,
         94
       ],
-      "text": "GOAL!\n10/10 CLEAR\nGREAT!\nPLAY AGAIN"
+      "text": "おしまい\n10もん できた\nおめでとう\nまた あそぼう"
     },
     {
       "position": [
@@ -9336,7 +9336,7 @@
         67,
         94
       ],
-      "text": "PLAY AGAIN\nBLUE ARROW\nSTEP ON\nTHE PLATE"
+      "text": "もういちど\nあそぶときは\nあおい みちの\nいたを ふもう"
     }
   ],
   "prebuilt_chunks": [

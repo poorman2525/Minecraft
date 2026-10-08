@@ -1,7 +1,7 @@
 {
-  "artifact": "math_maze_v3.mcworld",
-  "sha256": "b981f7d06fdd2f9d0891b7d4bac9521351ded18b20244e50f35d7566dbf96c77",
-  "size_bytes": 33063,
+  "artifact": "math_maze_v4.mcworld",
+  "sha256": "42ef56ba4d4b9fcbb794d9dcbaccf20f32f7a574dbe0a2722ddaeab5d3a7dea8",
+  "size_bytes": 33351,
   "static_validation": "PASS",
   "counts": {
     "questions": 10,
@@ -22,6 +22,7 @@
     "ZIP CRC, root paths, required world files, no scripts or packs",
     "Little-endian level.dat and header, adventure/peaceful/spawn/commands settings",
     "All 80 prebuilt chunks readable and finalized in stored LevelDB",
+    "Hiragana instructions and celebration round-trip through sign NBT and escaped command JSON",
     "All saved command/sign NBT, downward chains, impulse redstone/chain auto flags and text checked",
     "All 11 rooms fully enclosed, floors/roofs/walls stored; all arrivals safe",
     "Arithmetic, 30 reachable choice routes, 10 correct advances and 20 retries checked against saved TP commands",

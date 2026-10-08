@@ -106,9 +106,18 @@ def verify():
                 tag = entities[pos]
                 assert block(*pos).base_name == "wall_sign"
                 assert tag["id"].py_str == "Sign" and tag["Text"].py_str == record["text"]
-                assert tag["Text"].py_str.isascii()
+                assert all(ord(c) < 128 or 0x3040 <= ord(c) <= 0x309F for c in tag["Text"].py_str)
                 assert tag["FrontText"]["Text"].py_str == record["text"]
             assert len(entities) == len(layout["commands"]) + len(layout["signs"])
+            display_texts = [r["text"] for r in layout["signs"]]
+            for r in layout["commands"]:
+                if "titleraw" in r["command"]:
+                    message = json.loads(r["command"][r["command"].index("{"):])
+                    display_texts.extend(item["text"] for item in message["rawtext"])
+            assert any("ここを ふもう" in t for t in display_texts)
+            assert all(word in display_texts for word in ("せいかい", "もういちど", "おめでとう"))
+            assert not any("STEP ON" in t or "TRY AGAIN" in t for t in display_texts)
+            checks.append("Hiragana instructions and celebration round-trip through sign NBT and escaped command JSON")
             checks.append("All saved command/sign NBT, downward chains, impulse redstone/chain auto flags and text checked")
             # Every room has no physical opening to another room/the outside.
             for i in range(11):
@@ -182,7 +191,7 @@ def verify():
             assert block(*layout["restart_plate"]).base_name == "stone_pressure_plate"
             checks.append("31 physical pressure plates, 31 colored floor arrows and 41 five-block-high text displays verified")
             commands = [e["Command"].py_str for e in entities.values() if e["id"].py_str == "CommandBlock"]
-            assert any("tag=!maze_goal" in c and "GREAT!" in c for c in commands)
+            assert any("tag=!maze_goal" in c and "\\u304a\\u3081\\u3067\\u3068\\u3046" in c for c in commands)
             assert any("particle minecraft:totem_particle" in c for c in commands)
             assert any("remove maze_goal" in c for c in commands)
             counts = {"questions": 10, "addition": 5, "subtraction": 5, "routes": 30,
